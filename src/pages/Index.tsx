@@ -382,7 +382,7 @@ const Index = () => {
 
         {/* Content */}
         <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12 relative z-10 px-4">
-          <p className="text-[11px] md:text-[17px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
+          <p className="text-[14px] md:text-[20px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
             every week, we share our lab notes —
             <br />
             <span className="font-bold">real stories from girls finally resolving</span>
@@ -390,7 +390,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-2pt)] px-6">
+          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-4pt)] px-6">
             join our community →
           </Button>
         </div>
