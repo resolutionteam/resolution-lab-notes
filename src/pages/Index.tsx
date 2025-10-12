@@ -143,7 +143,7 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: '35%'
+              top: 'calc(35% - 30pt)'
             }}
           />
           
@@ -189,7 +189,7 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-[16px] md:text-[26px] font-body text-hot-pink tracking-wider">
+              <h1 className="text-[11px] md:text-[21px] font-body text-hot-pink tracking-wider">
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
