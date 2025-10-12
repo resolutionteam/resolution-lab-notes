@@ -209,13 +209,12 @@ const Index = () => {
             <div 
               className="p-8 md:p-12 relative"
               style={{
-                background: 'rgba(0, 0, 0, 0.2)',
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
             >
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
-                <span className="text-xs font-body opacity-50 tracking-widest">[ PRIMARY_MISSION ]</span>
+                <span className="text-xs font-body opacity-50 tracking-widest">[ WE ARE ]</span>
               </div>
               <p className="text-3xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
@@ -226,13 +225,12 @@ const Index = () => {
             <div 
               className="p-8 md:p-10 relative ml-auto max-w-2xl"
               style={{
-                background: 'rgba(0, 0, 0, 0.2)',
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
-                <span className="text-xs font-body opacity-50 tracking-widest">[ OBJECTIVES ]</span>
+                <span className="text-xs font-body opacity-50 tracking-widest">[ our bread & butter ]</span>
               </div>
               <p className="text-xl md:text-2xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
