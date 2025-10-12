@@ -1,7 +1,7 @@
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
-import heroBlob from "@/assets/hero-blob.jpg";
+import heroBlob from "@/assets/hero-blob-new.png";
 
 const Index = () => {
   const testimonials = [
@@ -17,22 +17,22 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-1/4 left-1/4">
+          <SMSBubble delay={0} className="absolute top-20 left-12">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-1/3 right-1/4">
+          <SMSBubble delay={1.5} className="absolute top-32 right-12">
             ✨
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-1/3 left-1/3">
+          <SMSBubble delay={3} className="absolute bottom-32 left-16">
             💕
           </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-1/4 right-1/3">
+          <SMSBubble delay={2} className="absolute bottom-20 right-16">
             🌟
           </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-2/3 left-1/4">
+          <SMSBubble delay={2.5} className="absolute top-1/2 left-8">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-2/3 right-1/4">
+          <SMSBubble delay={1} className="absolute top-1/2 right-8">
             💅
           </SMSBubble>
         </div>
@@ -57,7 +57,7 @@ const Index = () => {
             {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.49}
+              opacity={0.37}
               className="w-full h-auto relative z-10"
             />
           </div>
@@ -66,7 +66,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
             your sassy bestie who helps you see your relationships for what they are:
             <br />
-            <span style={{ color: '#008000', fontStyle: 'italic' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic' }}>time wasters</span>.
+            <span style={{ color: '#008000', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
           </p>
         </div>
       </section>
@@ -74,12 +74,12 @@ const Index = () => {
       {/* Section 2: Welcome */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Custom floating blobs */}
-        <div className="absolute inset-0 pointer-events-none opacity-40">
+        <div className="absolute inset-0 pointer-events-none opacity-60">
           {/* Pastel yellow blob */}
           <div 
             className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl animate-float"
             style={{ 
-              background: 'radial-gradient(circle, hsl(50, 100%, 85%) 0%, hsl(50, 100%, 90%) 100%)',
+              background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               animationDelay: '0s'
             }}
           />
@@ -88,7 +88,7 @@ const Index = () => {
           <div 
             className="absolute bottom-32 right-20 w-72 h-72 rounded-full blur-3xl animate-float"
             style={{ 
-              background: 'radial-gradient(circle, hsl(270, 70%, 85%) 0%, hsl(270, 70%, 90%) 100%)',
+              background: 'radial-gradient(circle, hsl(270, 75%, 80%) 0%, hsl(270, 75%, 85%) 100%)',
               animationDelay: '2s'
             }}
           />
@@ -97,7 +97,7 @@ const Index = () => {
           <div 
             className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl animate-float"
             style={{ 
-              background: 'radial-gradient(circle, hsl(120, 60%, 85%) 0%, hsl(120, 60%, 90%) 100%)',
+              background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
               animationDelay: '1s'
             }}
           />
@@ -106,7 +106,7 @@ const Index = () => {
           <div 
             className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl animate-float"
             style={{ 
-              background: 'radial-gradient(circle, hsl(340, 100%, 90%) 0%, hsl(340, 100%, 95%) 100%)',
+              background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               animationDelay: '1.5s'
             }}
           />
@@ -124,7 +124,7 @@ const Index = () => {
               the AI support system for girls who feel everything.
             </p>
             
-            <p className="text-xl md:text-2xl font-body leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
+            <p className="text-xl md:text-2xl font-body font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
               we're building tools that make stress, love, and health easier to talk about.
             </p>
           </div>
@@ -169,11 +169,11 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10">
           <p className="text-2xl md:text-3xl font-body text-foreground leading-relaxed max-w-2xl mx-auto">
-            Every week, we share our lab notes — real stories from girls finally resolving their medical mysteries
+            every week, we share our lab notes — real stories from girls finally resolving their medical mysteries
           </p>
 
           <Button variant="cta" size="lg" className="font-display italic">
-            Join our community →
+            join our community →
           </Button>
         </div>
       </section>
