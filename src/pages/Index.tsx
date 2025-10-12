@@ -40,26 +40,26 @@ const Index = () => {
         {/* Halo effect - behind everything */}
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <div className="relative w-full max-w-md mx-auto">
-            {/* Outer glow - pink/purple */}
+            {/* Outer glow - pink */}
             <img 
               src={heroBlob} 
               alt="" 
               className="absolute w-[108%] h-auto opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(80px) brightness(1.5) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+              style={{ filter: 'blur(80px) brightness(1.5) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
             />
-            {/* Middle glow - pink/purple */}
+            {/* Middle glow - pink */}
             <img 
               src={heroBlob} 
               alt="" 
               className="absolute w-[105%] h-auto opacity-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(50px) brightness(1.4) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+              style={{ filter: 'blur(50px) brightness(1.4) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
             />
-            {/* Inner glow - pink/purple */}
+            {/* Inner glow - pink */}
             <img 
               src={heroBlob} 
               alt="" 
               className="absolute w-full h-auto opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(30px) brightness(1.3) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+              style={{ filter: 'blur(30px) brightness(1.3) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
             />
           </div>
         </div>
