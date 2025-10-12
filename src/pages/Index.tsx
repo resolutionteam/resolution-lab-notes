@@ -179,7 +179,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-display italic">
+          <Button variant="cta" size="lg" className="font-display">
             join our community →
           </Button>
         </div>
