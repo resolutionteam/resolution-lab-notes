@@ -178,18 +178,18 @@ const Index = () => {
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block pl-[31px] md:pl-[39px] pr-[46px] md:pr-[54px] py-4 relative mx-auto"
+              className="inline-block pl-[46px] md:pl-[54px] pr-[61px] md:pr-[69px] py-[calc(1rem+5pt)] relative mx-auto"
               style={{
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
             >
-              <div className="absolute top-2 right-2 flex gap-1">
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-50" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
+              <div className="absolute top-3 right-3 flex gap-1.5">
+                <div className="w-3 h-3 rounded-full bg-hot-pink opacity-50" />
+                <div className="w-3 h-3 rounded-full bg-hot-pink opacity-30" />
+                <div className="w-3 h-3 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-[11px] md:text-[21px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-20pt' }}>
+              <h1 className="text-[26px] md:text-[36px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-20pt' }}>
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
