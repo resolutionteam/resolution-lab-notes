@@ -138,7 +138,7 @@ const Index = () => {
           
           {/* Baby pink blob */}
           <div 
-            className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl"
+            className="absolute top-[60%] right-[15%] w-56 h-56 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
@@ -224,7 +224,7 @@ const Index = () => {
       </section>
 
       {/* Section 3: Community */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-20">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-8 -mt-32">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
