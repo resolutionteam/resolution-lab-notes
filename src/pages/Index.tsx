@@ -135,17 +135,6 @@ const Index = () => {
             }}
           />
           
-          {/* Pastel green blob */}
-          <div 
-            className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl"
-            style={{ 
-              background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
-              boxShadow: '0 0 60px 30px hsl(120, 65%, 80% / 0.3)',
-              animation: 'float 7s ease-in-out infinite',
-              animationDelay: '1s',
-              willChange: 'transform'
-            }}
-          />
           
           {/* Baby pink blob */}
           <div 
@@ -182,10 +171,10 @@ const Index = () => {
           </div>
 
           {/* Main content with lab readout aesthetic */}
-          <div className="space-y-12 max-w-4xl mx-auto px-4">
+          <div className="space-y-12 max-w-2xl mx-auto px-4">
             {/* Main headline in terminal box */}
             <div 
-              className="p-6 md:p-12 relative"
+              className="p-6 md:p-10 relative"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
@@ -194,14 +183,14 @@ const Index = () => {
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ we are ]</span>
               </div>
-              <p className="text-2xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
+              <p className="text-xl md:text-3xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
               </p>
             </div>
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-6 md:p-10 relative ml-auto max-w-full md:max-w-2xl"
+              className="p-6 md:p-8 relative ml-auto max-w-full md:max-w-xl"
               style={{
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
@@ -210,7 +199,7 @@ const Index = () => {
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ our bread & butter ]</span>
               </div>
-              <p className="text-lg md:text-2xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
+              <p className="text-base md:text-xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
               </p>
             </div>
@@ -258,13 +247,13 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-4 md:left-20 top-[15%]"
+            className="absolute hidden md:block md:left-20 md:top-[15%]"
           >
             {testimonials[0]}
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-4 md:left-24 top-[75%]">
+          <div className="absolute hidden md:block md:left-24 md:top-[75%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -285,7 +274,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-          <div className="absolute right-4 md:right-20 top-[20%]">
+          <div className="absolute hidden md:block md:right-20 md:top-[20%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -306,7 +295,7 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-4 md:right-24 bottom-[20%]"
+            className="absolute hidden md:block md:right-24 md:bottom-[20%]"
           >
             {testimonials[3]}
           </SMSBubble>
