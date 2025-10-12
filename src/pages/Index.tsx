@@ -48,27 +48,6 @@ const Index = () => {
           />
         </div>
 
-        {/* Floating SMS bubbles in background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-20 left-[24%]">
-            💬
-          </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-24 right-[25%]">
-            ✨
-          </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-[45%] left-[15%]">
-            🎀
-          </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-[45%] right-[15%]">
-            💅
-          </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-24 left-[14%]">
-            💕
-          </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-20 right-[20%]">
-            🌟
-          </SMSBubble>
-        </div>
 
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
@@ -185,7 +164,7 @@ const Index = () => {
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block px-8 py-4 relative"
+              className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
@@ -196,17 +175,17 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-2xl md:text-3xl font-body text-hot-pink tracking-wider">
+              <h1 className="text-xl md:text-3xl font-body text-hot-pink tracking-wider">
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
           </div>
 
           {/* Main content with lab readout aesthetic */}
-          <div className="space-y-12 max-w-4xl mx-auto">
+          <div className="space-y-12 max-w-4xl mx-auto px-4">
             {/* Main headline in terminal box */}
             <div 
-              className="p-8 md:p-12 relative"
+              className="p-6 md:p-12 relative"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
@@ -215,14 +194,14 @@ const Index = () => {
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ we are ]</span>
               </div>
-              <p className="text-3xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
+              <p className="text-2xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
               </p>
             </div>
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-8 md:p-10 relative ml-auto max-w-2xl"
+              className="p-6 md:p-10 relative ml-auto max-w-full md:max-w-2xl"
               style={{
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
@@ -231,7 +210,7 @@ const Index = () => {
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ our bread & butter ]</span>
               </div>
-              <p className="text-xl md:text-2xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
+              <p className="text-lg md:text-2xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
               </p>
             </div>
@@ -279,13 +258,13 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-20 top-1/4"
+            className="absolute left-4 md:left-20 top-[15%]"
           >
             {testimonials[0]}
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-24 top-2/3">
+          <div className="absolute left-4 md:left-24 top-[75%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -306,7 +285,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-          <div className="absolute right-20 top-1/3">
+          <div className="absolute right-4 md:right-20 top-[20%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -327,14 +306,14 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-24 bottom-1/3"
+            className="absolute right-4 md:right-24 bottom-[20%]"
           >
             {testimonials[3]}
           </SMSBubble>
         </div>
 
         {/* Content */}
-        <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10">
+        <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10 px-4">
           <p className="text-[19px] md:text-[22px] font-body text-foreground leading-relaxed max-w-2xl mx-auto">
             every week, we share our lab notes —
             <br />
