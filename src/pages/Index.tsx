@@ -2,8 +2,30 @@ import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
 import heroBlob from "@/assets/hero-blob-with-halo.png";
+import { useRef, useLayoutEffect } from "react";
 
 const Index = () => {
+  const topBoxRef = useRef<HTMLDivElement>(null);
+  const yellowBlobRef = useRef<HTMLDivElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    const update = () => {
+      const section = sectionRef.current;
+      const box = topBoxRef.current;
+      const blob = yellowBlobRef.current;
+      if (!section || !box || !blob) return;
+      
+      const sectionRect = section.getBoundingClientRect();
+      const boxRect = box.getBoundingClientRect();
+      const centerY = boxRect.top - sectionRect.top + boxRect.height / 2;
+      blob.style.top = `${centerY}px`;
+    };
+    
+    update();
+    window.addEventListener('resize', update);
+    return () => window.removeEventListener('resize', update);
+  }, []);
   const testimonials = [
     "I finally stopped texting him. My rash is gone now.",
     "My mom and I argue less when I slept more.",
@@ -75,7 +97,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Welcome */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 -mt-96">
+      <section ref={sectionRef} className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 -mt-96">
         {/* Subtle sci-fi grid background - same as other pages */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
@@ -113,6 +135,7 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none opacity-60">
           {/* Pastel yellow blob */}
           <div 
+            ref={yellowBlobRef}
             className="absolute left-10 w-64 h-64 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
@@ -176,16 +199,20 @@ const Index = () => {
           <div className="space-y-8 max-w-2xl mx-auto px-4">
             {/* Main headline in terminal box */}
             <div 
+              ref={topBoxRef}
               className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-lg"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
             >
-              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
-                <span className="text-[8px] font-body opacity-50 tracking-wider">[ we are ]</span>
+              <div 
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                style={{ borderColor: 'rgba(107, 140, 255, 0.25)' }}
+              >
+                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ we are ]</span>
               </div>
-              <p className="text-base md:text-xl font-body text-foreground leading-tight tracking-wide">
+              <p className="text-base md:text-xl font-body text-foreground leading-tight tracking-wide mt-1">
                 the AI support system for girls who feel everything.
               </p>
             </div>
@@ -198,10 +225,13 @@ const Index = () => {
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
-              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
-                <span className="text-[8px] font-body opacity-50 tracking-wider">[ our bread & butter ]</span>
+              <div 
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                style={{ borderColor: 'rgba(101, 196, 102, 0.25)' }}
+              >
+                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our bread & butter ]</span>
               </div>
-              <p className="text-sm md:text-base font-body italic leading-relaxed" style={{ color: '#65C466' }}>
+              <p className="text-sm md:text-base font-body italic leading-relaxed mt-1" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
               </p>
             </div>
@@ -214,8 +244,11 @@ const Index = () => {
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
             >
-              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
-                <span className="text-[8px] font-body opacity-50 tracking-wider">[ our why ]</span>
+              <div 
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                style={{ borderColor: 'rgba(196, 81, 232, 0.22)' }}
+              >
+                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our why ]</span>
               </div>
               <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.5)' }}>
                 talking about your problems helps you heal before they take you to the doctor.
