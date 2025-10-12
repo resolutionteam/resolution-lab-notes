@@ -263,13 +263,13 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-[8%] top-[22%] md:left-24 md:top-[20%] max-w-[60%] text-sm md:text-base"
+            className="absolute left-[8%] top-[18%] md:left-24 md:top-[18%] max-w-[60%] text-sm md:text-base"
           >
             {testimonials[0]}
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-[5%] top-[62%] md:left-24 md:top-[70%]">
+          <div className="absolute left-[3%] top-[59%] md:left-24 md:top-[68%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -290,7 +290,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-          <div className="absolute right-[8%] top-[35%] md:right-20 md:top-[24%]">
+          <div className="absolute right-[8%] top-[29%] md:right-20 md:top-[24%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -311,7 +311,7 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-[8%] bottom-[20%] md:right-24 md:bottom-[18%]"
+            className="absolute right-[8%] bottom-[14%] md:right-24 md:bottom-[16%]"
           >
             {testimonials[3]}
           </SMSBubble>
