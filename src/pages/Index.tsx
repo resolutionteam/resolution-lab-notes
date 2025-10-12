@@ -207,7 +207,7 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(107, 140, 255, 0.25)' }}
               >
                 <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ we are ]</span>
@@ -226,7 +226,7 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(101, 196, 102, 0.25)' }}
               >
                 <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our bread & butter ]</span>
@@ -245,7 +245,7 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white/92 border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(196, 81, 232, 0.22)' }}
               >
                 <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our why ]</span>
