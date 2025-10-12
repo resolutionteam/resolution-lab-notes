@@ -136,14 +136,17 @@ const Index = () => {
           {/* Pastel yellow blob */}
           <div 
             ref={yellowBlobRef}
-            className="absolute left-10 w-64 h-64 rounded-full blur-3xl"
+            className="absolute rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(35% - 10pt)'
+              top: 'calc(35% - 25pt)',
+              left: 'calc(2.5rem + 8pt)',
+              width: '16rem',
+              height: '16rem'
             }}
           />
           
@@ -176,7 +179,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16" style={{ marginTop: '-10pt' }}>
+          <div className="mb-16" style={{ marginTop: '-20pt' }}>
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
