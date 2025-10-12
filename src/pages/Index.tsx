@@ -17,22 +17,22 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-20 left-16">
+          <SMSBubble delay={0} className="absolute top-24 left-20">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-20 right-16">
+          <SMSBubble delay={1.5} className="absolute top-16 right-24">
             ✨
           </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-1/2 -translate-y-1/2 left-12">
+          <SMSBubble delay={2.5} className="absolute top-1/3 left-16">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute top-1/2 -translate-y-1/2 right-12">
+          <SMSBubble delay={1} className="absolute bottom-1/3 right-16">
             💅
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-20 left-16">
+          <SMSBubble delay={3} className="absolute bottom-24 left-24">
             💕
           </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-20 right-16">
+          <SMSBubble delay={2} className="absolute bottom-16 right-20">
             🌟
           </SMSBubble>
         </div>
@@ -72,7 +72,7 @@ const Index = () => {
             {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.37}
+              opacity={0.28}
               className="w-full h-auto relative z-10"
             />
           </div>
@@ -81,7 +81,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
             your sassy bestie who helps you see your relationships for what they are:
             <br />
-            <span style={{ color: '#008000', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
+            <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
           </p>
         </div>
       </section>
@@ -96,7 +96,8 @@ const Index = () => {
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               animation: 'float 8s ease-in-out infinite',
-              animationDelay: '0s'
+              animationDelay: '0s',
+              willChange: 'transform'
             }}
           />
           
@@ -106,7 +107,8 @@ const Index = () => {
             style={{ 
               background: 'radial-gradient(circle, hsl(270, 75%, 80%) 0%, hsl(270, 75%, 85%) 100%)',
               animation: 'float 10s ease-in-out infinite',
-              animationDelay: '2s'
+              animationDelay: '2s',
+              willChange: 'transform'
             }}
           />
           
@@ -116,7 +118,8 @@ const Index = () => {
             style={{ 
               background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
               animation: 'float 7s ease-in-out infinite',
-              animationDelay: '1s'
+              animationDelay: '1s',
+              willChange: 'transform'
             }}
           />
           
@@ -126,7 +129,8 @@ const Index = () => {
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               animation: 'float 9s ease-in-out infinite',
-              animationDelay: '1.5s'
+              animationDelay: '1.5s',
+              willChange: 'transform'
             }}
           />
         </div>
@@ -188,7 +192,11 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10">
           <p className="text-xl md:text-2xl font-body text-foreground leading-relaxed max-w-2xl mx-auto">
-            every week, we share our lab notes — <span className="font-bold">real stories from girls finally resolving their medical mysteries</span>
+            every week, we share our lab notes —
+            <br />
+            <span className="font-bold">real stories from girls finally resolving</span>
+            <br />
+            <span className="font-bold">their medical mysteries</span>
           </p>
 
           <Button variant="cta" size="lg" className="font-display italic">
