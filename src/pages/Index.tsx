@@ -189,7 +189,7 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-xl md:text-3xl font-body text-hot-pink tracking-wider">
+              <h1 className="text-xl md:text-3xl font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
