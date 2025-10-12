@@ -119,7 +119,7 @@ const Index = () => {
 
           {/* Main content with staggered layout */}
           <div className="space-y-16">
-            <p className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight max-w-3xl">
+            <p className="text-4xl md:text-5xl font-ui font-bold text-foreground leading-tight max-w-3xl">
               the AI support system for girls who feel everything.
             </p>
             
