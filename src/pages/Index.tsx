@@ -286,14 +286,15 @@ const Index = () => {
           
           {/* Baby pink blob - centered behind button */}
           <div 
-            className="absolute top-1/2 w-56 h-56 rounded-full blur-3xl"
+            className="absolute w-56 h-56 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
               willChange: 'transform',
-              left: 'calc(50% - 7rem)'
+              left: 'calc(50% - 7rem)',
+              top: '45%'
             }}
           />
         </div>
