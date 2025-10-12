@@ -75,7 +75,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Welcome */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-0">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 -mt-32">
         {/* Subtle sci-fi grid background - same as other pages */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
@@ -310,7 +310,7 @@ const Index = () => {
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-[3%] top-[52%] md:left-24 md:top-[60%]">
+          <div className="absolute left-[3%] top-[58%] md:left-24 md:top-[65%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
