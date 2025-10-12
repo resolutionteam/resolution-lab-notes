@@ -11,8 +11,11 @@ export const SMSBubble = ({
 }: SMSBubbleProps) => {
   return (
     <div 
-      className={`bg-bright-green text-white px-4 py-2 rounded-2xl text-sm font-ui max-w-xs animate-float-bubble ${className}`}
-      style={{ animationDelay: `${delay}s` }}
+      className={`bg-bright-green text-white px-4 py-2 text-sm font-ui max-w-[200px] animate-float-bubble ${className}`}
+      style={{ 
+        animationDelay: `${delay}s`,
+        borderRadius: '18px 18px 18px 4px'
+      }}
     >
       {children}
     </div>

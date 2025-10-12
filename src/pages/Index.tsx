@@ -37,12 +37,13 @@ const Index = () => {
             meet fabio
           </h2>
 
-          {/* Hero blob */}
+          {/* Hero blob with glow */}
           <div className="relative w-full max-w-md mx-auto">
+            <div className="absolute inset-0 blur-3xl opacity-50" style={{ background: 'radial-gradient(circle, hsl(328, 100%, 70%) 0%, transparent 70%)' }}></div>
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.7}
-              className="w-full h-auto"
+              opacity={0.49}
+              className="w-full h-auto relative z-10"
             />
           </div>
 
@@ -98,7 +99,7 @@ const Index = () => {
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Header with more breathing room */}
-          <h1 className="text-3xl md:text-4xl font-display text-foreground mb-20 text-center">
+          <h1 className="text-3xl md:text-4xl font-display mb-20 text-center" style={{ color: '#FF2CA8' }}>
             welcome to resolution labs.
           </h1>
 
