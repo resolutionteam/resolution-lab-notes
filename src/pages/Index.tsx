@@ -41,7 +41,7 @@ const Index = () => {
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
           {/* "meet fabio" text above blob */}
           <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
-            meet <span style={{ color: '#FF2CA8' }}>fabio</span>
+            meet <span style={{ color: '#E8158A' }}>fabio</span>
           </h2>
 
           {/* Hero blob */}
@@ -57,7 +57,7 @@ const Index = () => {
           <p className="text-xl md:text-2xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
             your sassy bestie who helps you see your relationships for what they are:
             <br />
-            <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
+            <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#E8158A', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
           </p>
         </div>
       </section>
@@ -113,7 +113,7 @@ const Index = () => {
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Header with more breathing room */}
-          <h1 className="text-3xl md:text-4xl font-ui mb-20 text-center" style={{ color: '#FF2CA8' }}>
+          <h1 className="text-3xl md:text-4xl font-ui mb-20 text-center" style={{ color: '#E8158A' }}>
             welcome to resolution labs.
           </h1>
 
