@@ -136,14 +136,17 @@ const Index = () => {
           {/* Pastel yellow blob */}
           <div 
             ref={yellowBlobRef}
-            className="absolute left-10 w-64 h-64 rounded-full blur-3xl"
+            className="absolute rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: '35%'
+              top: 'calc(35% - 435pt)',
+              left: 'calc(2.5rem + 108pt)',
+              width: '16rem',
+              height: '16rem'
             }}
           />
           
@@ -176,7 +179,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16">
+          <div className="mb-16" style={{ marginTop: '-300pt' }}>
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
@@ -189,7 +192,7 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-[6px] md:text-[16px] font-body text-hot-pink tracking-wider">
+              <h1 className="text-xl md:text-3xl font-body text-hot-pink tracking-wider">
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
@@ -390,7 +393,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-4pt)] px-6">
+          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-15pt)] px-6">
             join our community →
           </Button>
         </div>
