@@ -178,7 +178,7 @@ const Index = () => {
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block px-[31px] md:px-[39px] py-4 relative mx-auto"
+              className="inline-block pl-[31px] md:pl-[39px] pr-[46px] md:pr-[54px] py-4 relative mx-auto"
               style={{
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
