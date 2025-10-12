@@ -20,7 +20,7 @@ const Index = () => {
           <SMSBubble delay={0} className="absolute top-20 left-[24%]">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-24 right-[12%]">
+          <SMSBubble delay={1.5} className="absolute top-24 right-[18%]">
             ✨
           </SMSBubble>
           <SMSBubble delay={2.5} className="absolute top-[45%] left-[15%]">
@@ -51,22 +51,22 @@ const Index = () => {
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-[120%] h-auto opacity-30"
-                style={{ filter: 'blur(120px) brightness(1.3) hue-rotate(-10deg)' }}
+                className="absolute w-[120%] h-auto opacity-50"
+                style={{ filter: 'blur(120px) brightness(1.5) hue-rotate(-10deg)' }}
               />
               {/* Middle glow with cool tone */}
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-[110%] h-auto opacity-40"
-                style={{ filter: 'blur(80px) brightness(1.2) hue-rotate(-10deg)' }}
+                className="absolute w-[110%] h-auto opacity-60"
+                style={{ filter: 'blur(80px) brightness(1.4) hue-rotate(-10deg)' }}
               />
               {/* Inner glow - most intense with cool tone */}
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-full h-auto opacity-50"
-                style={{ filter: 'blur(50px) brightness(1.1) hue-rotate(-10deg)' }}
+                className="absolute w-full h-auto opacity-70"
+                style={{ filter: 'blur(50px) brightness(1.3) hue-rotate(-10deg)' }}
               />
             </div>
             {/* Main blob */}
@@ -195,12 +195,12 @@ const Index = () => {
 
         {/* Content */}
         <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10">
-          <p className="text-xl md:text-2xl font-body text-foreground leading-relaxed max-w-2xl mx-auto">
+          <p className="text-[19px] md:text-[22px] font-body text-foreground leading-relaxed max-w-2xl mx-auto">
             every week, we share our lab notes —
             <br />
             <span className="font-bold">real stories from girls finally resolving</span>
             <br />
-            <span className="font-bold">their medical mysteries</span>
+            <span className="font-bold">their medical mysteries.</span>
           </p>
 
           <Button variant="cta" size="lg" className="font-display italic">
