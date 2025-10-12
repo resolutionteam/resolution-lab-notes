@@ -1,7 +1,7 @@
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
-import heroBlob from "@/assets/hero-blob-with-halo.png";
+import heroBlob from "@/assets/hero-blob-final.png";
 
 const Index = () => {
   const testimonials = [
@@ -40,7 +40,7 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
           {/* "meet fabio" text above blob */}
-          <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
+          <h2 className="text-4xl md:text-5xl font-display italic" style={{ color: '#FF2CA8' }}>
             meet fabio
           </h2>
 
