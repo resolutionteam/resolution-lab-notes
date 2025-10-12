@@ -247,13 +247,13 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-2 top-[10%] md:left-20 md:top-[15%]"
+            className="absolute left-2 top-[8%] md:left-20 md:top-[12%]"
           >
             {testimonials[0]}
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-2 top-[70%] md:left-24 md:top-[75%]">
+          <div className="absolute left-2 top-[78%] md:left-24 md:top-[78%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -274,7 +274,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-          <div className="absolute right-2 top-[15%] md:right-20 md:top-[20%]">
+          <div className="absolute right-2 top-[12%] md:right-20 md:top-[18%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -295,15 +295,15 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-2 bottom-[15%] md:right-24 md:bottom-[20%]"
+            className="absolute right-2 bottom-[12%] md:right-24 md:bottom-[15%]"
           >
             {testimonials[3]}
           </SMSBubble>
         </div>
 
         {/* Content */}
-        <div className="max-w-3xl mx-auto text-center space-y-12 relative z-10 px-4">
-          <p className="text-[19px] md:text-[22px] font-body text-foreground leading-relaxed max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12 relative z-10 px-4">
+          <p className="text-base md:text-[22px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
             every week, we share our lab notes —
             <br />
             <span className="font-bold">real stories from girls finally resolving</span>
@@ -311,7 +311,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-base">
+          <Button variant="cta" size="lg" className="font-ui text-sm md:text-base">
             join our community →
           </Button>
         </div>
