@@ -64,46 +64,61 @@ const Index = () => {
 
       {/* Section 2: Welcome */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
-        {/* Custom floating blobs */}
+        {/* Sci-fi grid background */}
+        <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.1) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}
+          />
+        </div>
+
+        {/* Custom floating blobs with glow */}
         <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel yellow blob */}
+          {/* Pastel yellow blob with glow */}
           <div 
             className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
+              boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform'
             }}
           />
           
-          {/* Pastel purple blob */}
+          {/* Pastel purple blob with glow */}
           <div 
             className="absolute bottom-32 right-20 w-72 h-72 rounded-full blur-3xl"
             style={{ 
-              background: 'radial-gradient(circle, hsl(270, 75%, 80%) 0%, hsl(270, 75%, 85%) 100%)',
+              background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
+              boxShadow: '0 0 100px 50px hsl(290, 75%, 80% / 0.4)',
               animation: 'float 10s ease-in-out infinite',
               animationDelay: '2s',
               willChange: 'transform'
             }}
           />
           
-          {/* Pastel green blob */}
+          {/* Pastel green blob with glow */}
           <div 
             className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
+              boxShadow: '0 0 60px 30px hsl(120, 65%, 80% / 0.3)',
               animation: 'float 7s ease-in-out infinite',
               animationDelay: '1s',
               willChange: 'transform'
             }}
           />
           
-          {/* Baby pink blob */}
+          {/* Baby pink blob with glow */}
           <div 
             className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
+              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
               willChange: 'transform'
@@ -112,8 +127,18 @@ const Index = () => {
         </div>
 
         <div className="max-w-5xl mx-auto relative z-10">
-          {/* Header with more breathing room */}
-          <h1 className="text-3xl md:text-4xl font-ui mb-20 text-center" style={{ color: '#C451E8' }}>
+          {/* Header with gradient and glow */}
+          <h1 
+            className="text-3xl md:text-4xl font-ui mb-20 text-center font-bold"
+            style={{ 
+              background: 'linear-gradient(135deg, #C451E8 0%, #6B8CFF 50%, #C451E8 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text',
+              filter: 'drop-shadow(0 0 20px rgba(196, 81, 232, 0.4))',
+              animation: 'float 6s ease-in-out infinite'
+            }}
+          >
             welcome to resolution labs.
           </h1>
 
