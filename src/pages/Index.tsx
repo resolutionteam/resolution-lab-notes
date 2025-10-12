@@ -20,7 +20,7 @@ const Index = () => {
           <SMSBubble delay={0} className="absolute top-20 left-[24%]">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-24 right-[18%]">
+          <SMSBubble delay={1.5} className="absolute top-24 right-[25%]">
             ✨
           </SMSBubble>
           <SMSBubble delay={2.5} className="absolute top-[45%] left-[15%]">
@@ -72,7 +72,7 @@ const Index = () => {
             {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.9}
+              opacity={0.675}
               className="w-full h-auto relative z-10"
             />
           </div>
