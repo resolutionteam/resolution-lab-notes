@@ -37,37 +37,7 @@ const Index = () => {
           </SMSBubble>
         </div>
 
-        {/* Halo effect - behind everything */}
-        <div className="absolute inset-0 flex items-center justify-center z-0">
-          <div className="relative w-full max-w-md mx-auto">
-            {/* Outer glow - hot pink */}
-            <div 
-              className="absolute w-96 h-96 opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-              style={{ 
-                background: 'radial-gradient(circle, #FF2CA8 0%, #9B4DCA 40%, transparent 70%)',
-                filter: 'blur(80px)'
-              }}
-            />
-            {/* Middle glow - hot pink */}
-            <div 
-              className="absolute w-80 h-80 opacity-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-              style={{ 
-                background: 'radial-gradient(circle, #FF2CA8 0%, #E91E8C 50%, transparent 80%)',
-                filter: 'blur(50px)'
-              }}
-            />
-            {/* Inner glow - hot pink */}
-            <div 
-              className="absolute w-64 h-64 opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
-              style={{ 
-                background: 'radial-gradient(circle, #FF2CA8 0%, #FF66C4 60%, transparent 90%)',
-                filter: 'blur(30px)'
-              }}
-            />
-          </div>
-        </div>
-
-        {/* Content - in front of halo */}
+        {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
           {/* "meet fabio" text above blob */}
           <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
@@ -75,10 +45,10 @@ const Index = () => {
           </h2>
 
           {/* Hero blob */}
-          <div className="relative w-full max-w-md mx-auto">
+          <div className="relative w-full max-w-xl mx-auto">
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.675}
+              opacity={0.506}
               className="w-full h-auto"
             />
           </div>
