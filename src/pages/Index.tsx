@@ -17,7 +17,7 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-20 left-[20%]">
+          <SMSBubble delay={0} className="absolute top-20 left-[24%]">
             💬
           </SMSBubble>
           <SMSBubble delay={1.5} className="absolute top-24 right-[12%]">
@@ -26,7 +26,7 @@ const Index = () => {
           <SMSBubble delay={2.5} className="absolute top-[45%] left-[15%]">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-[40%] right-[15%]">
+          <SMSBubble delay={1} className="absolute bottom-[45%] right-[15%]">
             💅
           </SMSBubble>
           <SMSBubble delay={3} className="absolute bottom-24 left-[14%]">
@@ -45,34 +45,34 @@ const Index = () => {
 
           {/* Hero blob with glow that follows blob shape */}
           <div className="relative w-full max-w-md mx-auto">
-            {/* Multi-layered glow effect for enhanced halo */}
+            {/* Multi-layered glow effect for enhanced halo - behind the blob */}
             <div className="absolute inset-0 flex items-center justify-center">
-              {/* Outer glow - most diffuse */}
+              {/* Outer glow - most diffuse with cool tone */}
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-full h-auto opacity-40"
-                style={{ filter: 'blur(100px) brightness(1.5)' }}
+                className="absolute w-[120%] h-auto opacity-30"
+                style={{ filter: 'blur(120px) brightness(1.3) hue-rotate(-10deg)' }}
               />
-              {/* Middle glow */}
+              {/* Middle glow with cool tone */}
+              <img 
+                src={heroBlob} 
+                alt="" 
+                className="absolute w-[110%] h-auto opacity-40"
+                style={{ filter: 'blur(80px) brightness(1.2) hue-rotate(-10deg)' }}
+              />
+              {/* Inner glow - most intense with cool tone */}
               <img 
                 src={heroBlob} 
                 alt="" 
                 className="absolute w-full h-auto opacity-50"
-                style={{ filter: 'blur(60px) brightness(1.4)' }}
-              />
-              {/* Inner glow - most intense */}
-              <img 
-                src={heroBlob} 
-                alt="" 
-                className="absolute w-full h-auto opacity-60"
-                style={{ filter: 'blur(40px) brightness(1.3)' }}
+                style={{ filter: 'blur(50px) brightness(1.1) hue-rotate(-10deg)' }}
               />
             </div>
             {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
-              opacity={1.0}
+              opacity={0.9}
               className="w-full h-auto relative z-10"
             />
           </div>
