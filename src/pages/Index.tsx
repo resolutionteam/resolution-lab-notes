@@ -17,17 +17,23 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-20 left-20 opacity-30">
+          <SMSBubble delay={0} className="absolute top-1/4 left-1/4">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-40 right-32 opacity-30">
+          <SMSBubble delay={1.5} className="absolute top-1/3 right-1/4">
             ✨
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-32 left-40 opacity-30">
+          <SMSBubble delay={3} className="absolute bottom-1/3 left-1/3">
             💕
           </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-20 right-20 opacity-30">
+          <SMSBubble delay={2} className="absolute bottom-1/4 right-1/3">
             🌟
+          </SMSBubble>
+          <SMSBubble delay={2.5} className="absolute top-2/3 left-1/4">
+            🎀
+          </SMSBubble>
+          <SMSBubble delay={1} className="absolute bottom-2/3 right-1/4">
+            💅
           </SMSBubble>
         </div>
 
@@ -37,9 +43,18 @@ const Index = () => {
             meet fabio
           </h2>
 
-          {/* Hero blob with glow */}
+          {/* Hero blob with glow that follows blob shape */}
           <div className="relative w-full max-w-md mx-auto">
-            <div className="absolute inset-0 blur-3xl opacity-50" style={{ background: 'radial-gradient(circle, hsl(328, 100%, 70%) 0%, transparent 70%)' }}></div>
+            {/* Duplicate blob for glow effect */}
+            <div className="absolute inset-0 flex items-center justify-center">
+              <img 
+                src={heroBlob} 
+                alt="" 
+                className="w-full h-auto blur-3xl opacity-40"
+                style={{ filter: 'blur(60px) brightness(1.5)' }}
+              />
+            </div>
+            {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
               opacity={0.49}
@@ -49,9 +64,9 @@ const Index = () => {
 
           {/* Tagline below blob with colored text */}
           <p className="text-xl md:text-2xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
-            your sassy bestie who helps you see your relationships for what they are
+            your sassy bestie who helps you see your relationships for what they are:
             <br />
-            —<span style={{ color: '#008000' }}>life savers</span> or <span style={{ color: '#FF2CA8' }}>time wasters</span>.
+            <span style={{ color: '#008000', fontStyle: 'italic' }}>life savers</span> or <span style={{ color: '#FF2CA8', fontStyle: 'italic' }}>time wasters</span>.
           </p>
         </div>
       </section>
@@ -109,7 +124,7 @@ const Index = () => {
               the AI support system for girls who feel everything.
             </p>
             
-            <p className="text-xl md:text-2xl font-body text-foreground/70 leading-relaxed max-w-2xl ml-auto">
+            <p className="text-xl md:text-2xl font-body leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
               we're building tools that make stress, love, and health easier to talk about.
             </p>
           </div>
@@ -123,14 +138,14 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-8 top-1/4"
+            className="absolute left-20 top-1/4"
           >
             {testimonials[0]}
           </SMSBubble>
           
           <SMSBubble 
             delay={2} 
-            className="absolute left-12 bottom-1/3"
+            className="absolute left-24 top-2/3"
           >
             {testimonials[2]}
           </SMSBubble>
@@ -138,14 +153,14 @@ const Index = () => {
           {/* Right side bubbles */}
           <SMSBubble 
             delay={1.5} 
-            className="absolute right-8 top-1/3"
+            className="absolute right-20 top-1/3"
           >
             {testimonials[1]}
           </SMSBubble>
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-12 bottom-1/4"
+            className="absolute right-24 bottom-1/3"
           >
             {testimonials[3]}
           </SMSBubble>
@@ -157,7 +172,7 @@ const Index = () => {
             Every week, we share our lab notes — real stories from girls finally resolving their medical mysteries
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui">
+          <Button variant="cta" size="lg" className="font-display italic">
             Join our community →
           </Button>
         </div>
