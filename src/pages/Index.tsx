@@ -327,7 +327,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-sm md:text-base">
+          <Button variant="cta" size="lg" className="font-ui text-sm md:text-base italic">
             join our community →
           </Button>
         </div>
