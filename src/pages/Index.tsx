@@ -120,7 +120,7 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(5rem + 5pt)'
+              top: 'calc(5rem + 10pt)'
             }}
           />
           
@@ -176,7 +176,7 @@ const Index = () => {
           <div className="space-y-8 max-w-2xl mx-auto px-4">
             {/* Main headline in terminal box */}
             <div 
-              className="p-4 md:p-8 relative ml-auto max-w-full"
+              className="p-3 md:p-6 relative ml-auto max-w-full"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
@@ -192,7 +192,7 @@ const Index = () => {
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-4 md:p-6 relative ml-auto max-w-full md:max-w-xl"
+              className="p-3 md:p-5 relative ml-auto max-w-full md:max-w-xl"
               style={{
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
@@ -208,7 +208,7 @@ const Index = () => {
             
             {/* Our why box - smaller */}
             <div 
-              className="p-4 md:p-5 relative max-w-full md:max-w-xs ml-auto"
+              className="p-3 md:p-4 relative max-w-full md:max-w-xs ml-auto"
               style={{
                 border: '2px solid rgba(196, 81, 232, 0.2)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
