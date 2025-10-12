@@ -182,8 +182,8 @@ const Index = () => {
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
             >
-              <div className="absolute -top-2 left-4 px-1.5 py-0.5 bg-background">
-                <span className="text-[10px] font-body opacity-50 tracking-widest">[ we are ]</span>
+              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+                <span className="text-[8px] font-body opacity-50 tracking-wider">[ we are ]</span>
               </div>
               <p className="text-base md:text-xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
@@ -198,8 +198,8 @@ const Index = () => {
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
-              <div className="absolute -top-2 left-4 px-1.5 py-0.5 bg-background">
-                <span className="text-[10px] font-body opacity-50 tracking-widest">[ our bread & butter ]</span>
+              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+                <span className="text-[8px] font-body opacity-50 tracking-wider">[ our bread & butter ]</span>
               </div>
               <p className="text-sm md:text-base font-body italic leading-relaxed" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
@@ -214,8 +214,8 @@ const Index = () => {
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
             >
-              <div className="absolute -top-2 left-4 px-1.5 py-0.5 bg-background">
-                <span className="text-[10px] font-body opacity-50 tracking-widest">[ our why ]</span>
+              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+                <span className="text-[8px] font-body opacity-50 tracking-wider">[ our why ]</span>
               </div>
               <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.5)' }}>
                 talking about your problems helps you heal before they take you to the doctor.
