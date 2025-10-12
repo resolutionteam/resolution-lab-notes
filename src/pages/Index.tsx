@@ -15,6 +15,17 @@ const Index = () => {
     <div className="w-full">
       {/* Section 1: Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
+        {/* Subtle sci-fi grid background */}
+        <div className="absolute inset-0 pointer-events-none opacity-15">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.15) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}
+          />
+        </div>
+
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
           <SMSBubble delay={0} className="absolute top-20 left-[24%]">
@@ -186,6 +197,17 @@ const Index = () => {
 
       {/* Section 3: Community */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-20">
+        {/* Subtle sci-fi grid background */}
+        <div className="absolute inset-0 pointer-events-none opacity-15">
+          <div 
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.15) 1px, transparent 1px)',
+              backgroundSize: '50px 50px'
+            }}
+          />
+        </div>
+
         {/* Floating SMS bubbles around the sides */}
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           {/* Left side bubbles */}
