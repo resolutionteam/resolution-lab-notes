@@ -187,7 +187,6 @@ const Index = () => {
             <div 
               className="inline-block px-8 py-4 relative"
               style={{
-                background: 'rgba(0, 0, 0, 0.3)',
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
@@ -214,7 +213,7 @@ const Index = () => {
               }}
             >
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
-                <span className="text-xs font-body opacity-50 tracking-widest">[ WE ARE ]</span>
+                <span className="text-xs font-body opacity-50 tracking-widest">[ we are ]</span>
               </div>
               <p className="text-3xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
