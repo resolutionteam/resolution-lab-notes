@@ -26,6 +26,28 @@ const Index = () => {
           />
         </div>
 
+        {/* Subtle scanning lines */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '20%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '0s'
+            }}
+          />
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '60%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '2s'
+            }}
+          />
+        </div>
+
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
           <SMSBubble delay={0} className="absolute top-20 left-[24%]">
@@ -86,57 +108,75 @@ const Index = () => {
           />
         </div>
 
+        {/* Subtle scanning lines */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '25%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '1s'
+            }}
+          />
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '70%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '3s'
+            }}
+          />
+        </div>
+
         {/* Original floating blobs with glow */}
         <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel yellow SMS bubble blob */}
+          {/* Pastel yellow blob */}
           <div 
-            className="absolute top-20 left-10 w-64 h-64 blur-2xl"
+            className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
-              willChange: 'transform',
-              borderRadius: '18px 18px 18px 4px'
+              willChange: 'transform'
             }}
           />
           
-          {/* Pastel purple SMS bubble blob */}
+          {/* Pastel purple blob */}
           <div 
-            className="absolute bottom-32 right-20 w-72 h-72 blur-2xl"
+            className="absolute bottom-32 right-20 w-72 h-72 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
               boxShadow: '0 0 100px 50px hsl(290, 75%, 80% / 0.4)',
               animation: 'float 10s ease-in-out infinite',
               animationDelay: '2s',
-              willChange: 'transform',
-              borderRadius: '18px 18px 18px 4px'
+              willChange: 'transform'
             }}
           />
           
-          {/* Pastel green SMS bubble blob */}
+          {/* Pastel green blob */}
           <div 
-            className="absolute top-1/3 right-1/4 w-48 h-48 blur-2xl"
+            className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
               boxShadow: '0 0 60px 30px hsl(120, 65%, 80% / 0.3)',
               animation: 'float 7s ease-in-out infinite',
               animationDelay: '1s',
-              willChange: 'transform',
-              borderRadius: '18px 18px 18px 4px'
+              willChange: 'transform'
             }}
           />
           
-          {/* Baby pink SMS bubble blob */}
+          {/* Baby pink blob */}
           <div 
-            className="absolute bottom-1/4 left-1/3 w-56 h-56 blur-2xl"
+            className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
-              willChange: 'transform',
-              borderRadius: '18px 18px 18px 4px'
+              willChange: 'transform'
             }}
           />
         </div>
@@ -197,6 +237,28 @@ const Index = () => {
             style={{
               backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.15) 1px, transparent 1px)',
               backgroundSize: '50px 50px'
+            }}
+          />
+        </div>
+
+        {/* Subtle scanning lines */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '15%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '4s'
+            }}
+          />
+          <div 
+            className="absolute h-full w-1"
+            style={{
+              left: '80%',
+              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '6s'
             }}
           />
         </div>
