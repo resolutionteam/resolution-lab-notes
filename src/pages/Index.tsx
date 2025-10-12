@@ -123,7 +123,7 @@ const Index = () => {
               the AI support system for girls who feel everything.
             </p>
             
-            <p className="text-xl md:text-2xl font-body font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
+            <p className="text-xl md:text-2xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
               we're building tools that make
               <br />
               stress, love, and health
