@@ -113,13 +113,13 @@ const Index = () => {
 
         <div className="max-w-5xl mx-auto relative z-10">
           {/* Header with more breathing room */}
-          <h1 className="text-3xl md:text-4xl font-display mb-20 text-center" style={{ color: '#FF2CA8' }}>
+          <h1 className="text-3xl md:text-4xl font-ui mb-20 text-center" style={{ color: '#FF2CA8' }}>
             welcome to resolution labs.
           </h1>
 
           {/* Main content with staggered layout */}
           <div className="space-y-16">
-            <p className="text-4xl md:text-5xl font-ui font-bold text-foreground leading-tight max-w-3xl">
+            <p className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight max-w-3xl">
               the AI support system for girls who feel everything.
             </p>
             
