@@ -88,51 +88,55 @@ const Index = () => {
 
         {/* Original floating blobs with glow */}
         <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel yellow blob */}
+          {/* Pastel yellow SMS bubble blob */}
           <div 
-            className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl"
+            className="absolute top-20 left-10 w-64 h-64 blur-2xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
-              willChange: 'transform'
+              willChange: 'transform',
+              borderRadius: '18px 18px 18px 4px'
             }}
           />
           
-          {/* Pastel purple blob */}
+          {/* Pastel purple SMS bubble blob */}
           <div 
-            className="absolute bottom-32 right-20 w-72 h-72 rounded-full blur-3xl"
+            className="absolute bottom-32 right-20 w-72 h-72 blur-2xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
               boxShadow: '0 0 100px 50px hsl(290, 75%, 80% / 0.4)',
               animation: 'float 10s ease-in-out infinite',
               animationDelay: '2s',
-              willChange: 'transform'
+              willChange: 'transform',
+              borderRadius: '18px 18px 18px 4px'
             }}
           />
           
-          {/* Pastel green blob */}
+          {/* Pastel green SMS bubble blob */}
           <div 
-            className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl"
+            className="absolute top-1/3 right-1/4 w-48 h-48 blur-2xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
               boxShadow: '0 0 60px 30px hsl(120, 65%, 80% / 0.3)',
               animation: 'float 7s ease-in-out infinite',
               animationDelay: '1s',
-              willChange: 'transform'
+              willChange: 'transform',
+              borderRadius: '18px 18px 18px 4px'
             }}
           />
           
-          {/* Baby pink blob */}
+          {/* Baby pink SMS bubble blob */}
           <div 
-            className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl"
+            className="absolute bottom-1/4 left-1/3 w-56 h-56 blur-2xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
-              willChange: 'transform'
+              willChange: 'transform',
+              borderRadius: '18px 18px 18px 4px'
             }}
           />
         </div>
