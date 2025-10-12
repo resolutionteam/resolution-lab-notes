@@ -64,102 +64,116 @@ const Index = () => {
 
       {/* Section 2: Welcome */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
-        {/* Sci-fi grid background */}
-        <div className="absolute inset-0 pointer-events-none opacity-20">
+        {/* Enhanced sci-fi grid background with scanning lines */}
+        <div className="absolute inset-0 pointer-events-none opacity-35">
           <div 
             className="absolute inset-0"
             style={{
-              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.1) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.1) 1px, transparent 1px)',
+              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.15) 1px, transparent 1px)',
               backgroundSize: '50px 50px'
             }}
           />
+          {/* Animated scanning line */}
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(180deg, transparent 0%, hsl(290 75% 62% / 0.3) 50%, transparent 100%)',
+              backgroundSize: '100% 200px',
+              animation: 'scan 8s ease-in-out infinite',
+              animationDelay: '0s'
+            }}
+          />
         </div>
 
-        {/* Custom floating blobs with glow */}
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel yellow blob with glow */}
+        {/* Enhanced floating blobs with stronger glow and pulse */}
+        <div className="absolute inset-0 pointer-events-none opacity-70">
+          {/* Pastel yellow blob - 20% larger with pulse */}
           <div 
-            className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl"
+            className="absolute top-20 left-10 w-80 h-80 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
-              animation: 'float 8s ease-in-out infinite',
-              animationDelay: '0s',
+              boxShadow: '0 0 120px 60px hsl(50, 100%, 80% / 0.5)',
+              animation: 'float 8s ease-in-out infinite, pulse 4s ease-in-out infinite',
+              animationDelay: '0s, 0s',
               willChange: 'transform'
             }}
           />
           
-          {/* Pastel purple blob with glow */}
+          {/* Pastel purple blob - 20% larger with pulse */}
           <div 
-            className="absolute bottom-32 right-20 w-72 h-72 rounded-full blur-3xl"
+            className="absolute bottom-32 right-20 w-[345px] h-[345px] rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
-              boxShadow: '0 0 100px 50px hsl(290, 75%, 80% / 0.4)',
-              animation: 'float 10s ease-in-out infinite',
-              animationDelay: '2s',
+              boxShadow: '0 0 150px 80px hsl(290, 75%, 80% / 0.6)',
+              animation: 'float 10s ease-in-out infinite, pulse 5s ease-in-out infinite',
+              animationDelay: '2s, 1s',
               willChange: 'transform'
             }}
           />
           
-          {/* Pastel green blob with glow */}
+          {/* Pastel green blob - 20% larger with pulse */}
           <div 
-            className="absolute top-1/3 right-1/4 w-48 h-48 rounded-full blur-3xl"
+            className="absolute top-1/3 right-1/4 w-[230px] h-[230px] rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(120, 65%, 80%) 0%, hsl(120, 65%, 85%) 100%)',
-              boxShadow: '0 0 60px 30px hsl(120, 65%, 80% / 0.3)',
-              animation: 'float 7s ease-in-out infinite',
-              animationDelay: '1s',
+              boxShadow: '0 0 90px 50px hsl(120, 65%, 80% / 0.5)',
+              animation: 'float 7s ease-in-out infinite, pulse 4.5s ease-in-out infinite',
+              animationDelay: '1s, 0.5s',
               willChange: 'transform'
             }}
           />
           
-          {/* Baby pink blob with glow */}
+          {/* Baby pink blob - 20% larger with pulse */}
           <div 
-            className="absolute bottom-1/4 left-1/3 w-56 h-56 rounded-full blur-3xl"
+            className="absolute bottom-1/4 left-1/3 w-[270px] h-[270px] rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
-              animation: 'float 9s ease-in-out infinite',
-              animationDelay: '1.5s',
+              boxShadow: '0 0 110px 60px hsl(340, 100%, 85% / 0.5)',
+              animation: 'float 9s ease-in-out infinite, pulse 6s ease-in-out infinite',
+              animationDelay: '1.5s, 2s',
               willChange: 'transform'
             }}
           />
         </div>
 
-        <div className="max-w-5xl mx-auto relative z-10">
-          {/* Header with gradient and glow */}
+        <div className="max-w-6xl mx-auto relative z-10">
+          {/* Dramatic holographic header */}
           <h1 
-            className="text-3xl md:text-4xl font-ui mb-20 text-center font-bold"
+            className="text-5xl md:text-6xl font-ui mb-24 text-center font-extrabold tracking-tight"
             style={{ 
-              background: 'linear-gradient(135deg, #C451E8 0%, #6B8CFF 50%, #C451E8 100%)',
+              background: 'linear-gradient(135deg, #C451E8 0%, #6B8CFF 40%, #C451E8 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
               backgroundClip: 'text',
-              filter: 'drop-shadow(0 0 20px rgba(196, 81, 232, 0.4))',
-              animation: 'float 6s ease-in-out infinite'
+              filter: 'drop-shadow(0 0 30px rgba(196, 81, 232, 0.6)) drop-shadow(0 0 60px rgba(107, 140, 255, 0.4))',
+              animation: 'float 6s ease-in-out infinite, glow 3s ease-in-out infinite alternate'
             }}
           >
             welcome to resolution labs.
           </h1>
 
-          {/* Main content with staggered layout */}
-          <div className="space-y-16">
+          {/* Asymmetric layout with dramatic typography */}
+          <div className="space-y-20">
+            {/* Main headline - left-aligned, larger, Inter font */}
             <p 
-              className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight max-w-3xl"
+              className="text-5xl md:text-6xl font-ui font-extrabold text-foreground leading-tight max-w-4xl mr-auto tracking-tight"
               style={{
-                textShadow: '0 0 40px rgba(196, 81, 232, 0.15)',
-                letterSpacing: '-0.02em'
+                textShadow: '0 0 50px rgba(196, 81, 232, 0.4), 0 0 100px rgba(196, 81, 232, 0.2)',
+                letterSpacing: '-0.03em',
+                marginLeft: '0'
               }}
             >
               the AI support system for girls who feel everything.
             </p>
             
+            {/* Green subtext - right-aligned, stronger effects */}
             <p 
-              className="text-xl md:text-2xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" 
+              className="text-2xl md:text-3xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" 
               style={{ 
                 color: '#65C466',
-                textShadow: '0 0 30px rgba(101, 196, 102, 0.3)',
-                letterSpacing: '-0.01em'
+                textShadow: '0 0 40px rgba(101, 196, 102, 0.6), 0 0 80px rgba(101, 196, 102, 0.3)',
+                letterSpacing: '-0.01em',
+                marginRight: '0'
               }}
             >
               we're building tools that make stress, love,

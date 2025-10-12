@@ -128,3 +128,32 @@ All colors MUST be HSL.
     transform: translateY(-20px) translateX(10px);
   }
 }
+
+@keyframes scan {
+  0%, 100% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 30px rgba(196, 81, 232, 0.6)) drop-shadow(0 0 60px rgba(107, 140, 255, 0.4));
+  }
+  100% {
+    filter: drop-shadow(0 0 40px rgba(196, 81, 232, 0.8)) drop-shadow(0 0 80px rgba(107, 140, 255, 0.6));
+  }
+}
