@@ -182,14 +182,11 @@ const Index = () => {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          {/* Header with gradient - no halo */}
+          {/* Header - serif, simple purple */}
           <h1 
-            className="text-5xl md:text-6xl font-ui mb-24 text-center font-extrabold tracking-tight"
+            className="text-5xl md:text-6xl font-display italic font-bold mb-24 text-center tracking-tight"
             style={{ 
-              background: 'linear-gradient(135deg, #C451E8 0%, #6B8CFF 40%, #C451E8 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: 'hsl(290, 75%, 62%)',
               animation: 'float 6s ease-in-out infinite'
             }}
           >
@@ -198,26 +195,22 @@ const Index = () => {
 
           {/* Asymmetric layout with dramatic typography */}
           <div className="space-y-20">
-            {/* Main headline - left-aligned, larger, Inter font */}
+            {/* Main headline - centered, monospace, layered transparency */}
             <p 
-              className="text-5xl md:text-6xl font-ui font-extrabold text-foreground leading-tight max-w-4xl mr-auto tracking-tight"
+              className="text-5xl md:text-6xl font-body font-bold text-foreground leading-tight max-w-4xl mx-auto tracking-tight text-center"
               style={{
-                textShadow: '0 0 50px rgba(196, 81, 232, 0.4), 0 0 100px rgba(196, 81, 232, 0.2)',
-                letterSpacing: '-0.03em',
-                marginLeft: '0'
+                opacity: 0.85
               }}
             >
               the AI support system for girls who feel everything.
             </p>
             
-            {/* Green subtext - right-aligned, stronger effects */}
+            {/* Green subtext - centered, monospace, layered transparency */}
             <p 
-              className="text-2xl md:text-3xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" 
+              className="text-2xl md:text-3xl font-body font-bold italic leading-relaxed max-w-2xl mx-auto text-center" 
               style={{ 
                 color: '#65C466',
-                textShadow: '0 0 40px rgba(101, 196, 102, 0.6), 0 0 80px rgba(101, 196, 102, 0.3)',
-                letterSpacing: '-0.01em',
-                marginRight: '0'
+                opacity: 0.9
               }}
             >
               we're building tools that make stress, love,
@@ -273,20 +266,36 @@ const Index = () => {
             {testimonials[0]}
           </SMSBubble>
           
-          <SMSBubble 
-            delay={2} 
-            className="absolute left-24 top-2/3"
-          >
-            {testimonials[2]}
-          </SMSBubble>
+          {/* Bottom left bubble with glow */}
+          <div className="absolute left-24 top-2/3">
+            <div 
+              className="absolute inset-0 blur-3xl"
+              style={{
+                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.4) 0%, transparent 70%)',
+                transform: 'scale(1.6)',
+                animation: 'pulse 4s ease-in-out infinite'
+              }}
+            />
+            <SMSBubble delay={2} className="relative">
+              {testimonials[2]}
+            </SMSBubble>
+          </div>
           
           {/* Right side bubbles */}
-          <SMSBubble 
-            delay={1.5} 
-            className="absolute right-20 top-1/3"
-          >
-            {testimonials[1]}
-          </SMSBubble>
+          {/* Top right bubble with glow */}
+          <div className="absolute right-20 top-1/3">
+            <div 
+              className="absolute inset-0 blur-3xl"
+              style={{
+                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.4) 0%, transparent 70%)',
+                transform: 'scale(1.6)',
+                animation: 'pulse 4s ease-in-out infinite'
+              }}
+            />
+            <SMSBubble delay={1.5} className="relative">
+              {testimonials[1]}
+            </SMSBubble>
+          </div>
           
           <SMSBubble 
             delay={3} 
