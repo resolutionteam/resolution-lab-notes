@@ -288,13 +288,13 @@ const Index = () => {
           <div 
             className="absolute w-56 h-56 rounded-full blur-3xl"
             style={{ 
-              background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
+              background: 'radial-gradient(circle, hsl(340, 100%, 82%) 0%, hsl(340, 100%, 88%) 100%)',
+              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.5)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
               willChange: 'transform',
               left: 'calc(50% - 7rem)',
-              top: '45%'
+              top: '48%'
             }}
           />
         </div>
