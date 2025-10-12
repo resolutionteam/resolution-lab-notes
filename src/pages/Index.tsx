@@ -124,11 +124,9 @@ const Index = () => {
             </p>
             
             <p className="text-xl md:text-2xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
-              we're building tools that make
+              we're building tools that make stress, love,
               <br />
-              stress, love, and health
-              <br />
-              easier to talk about.
+              and health easier to talk about.
             </p>
           </div>
         </div>
@@ -179,7 +177,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-display">
+          <Button variant="cta" size="lg" className="font-ui text-base">
             join our community →
           </Button>
         </div>
