@@ -189,7 +189,7 @@ const Index = () => {
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
                 <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-[6px] md:text-[16px] font-body text-hot-pink tracking-wider">
+              <h1 className="text-[16px] md:text-[26px] font-body text-hot-pink tracking-wider">
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
