@@ -143,8 +143,8 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(35% - 115pt)',
-              left: 'calc(2.5rem + 68pt)',
+              top: 'calc(35% - 235pt)',
+              left: 'calc(2.5rem + 88pt)',
               width: '16rem',
               height: '16rem'
             }}
@@ -179,7 +179,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16" style={{ marginTop: '-100pt' }}>
+          <div className="mb-16" style={{ marginTop: '-300pt' }}>
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
