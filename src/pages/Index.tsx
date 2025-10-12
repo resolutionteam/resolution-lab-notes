@@ -37,43 +37,46 @@ const Index = () => {
           </SMSBubble>
         </div>
 
+        {/* Halo effect - behind everything */}
+        <div className="absolute inset-0 flex items-center justify-center z-0">
+          <div className="relative w-full max-w-md mx-auto">
+            {/* Outer glow - pink/purple */}
+            <img 
+              src={heroBlob} 
+              alt="" 
+              className="absolute w-[108%] h-auto opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{ filter: 'blur(80px) brightness(1.5) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+            />
+            {/* Middle glow - pink/purple */}
+            <img 
+              src={heroBlob} 
+              alt="" 
+              className="absolute w-[105%] h-auto opacity-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{ filter: 'blur(50px) brightness(1.4) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+            />
+            {/* Inner glow - pink/purple */}
+            <img 
+              src={heroBlob} 
+              alt="" 
+              className="absolute w-full h-auto opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              style={{ filter: 'blur(30px) brightness(1.3) sepia(0.4) saturate(2) hue-rotate(290deg)' }}
+            />
+          </div>
+        </div>
+
+        {/* Content - in front of halo */}
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
           {/* "meet fabio" text above blob */}
           <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
             meet fabio
           </h2>
 
-          {/* Hero blob with glow that follows blob shape */}
+          {/* Hero blob */}
           <div className="relative w-full max-w-md mx-auto">
-            {/* Multi-layered glow effect for enhanced halo - behind the blob */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              {/* Outer glow - pinky purple */}
-              <img 
-                src={heroBlob} 
-                alt="" 
-                className="absolute w-[108%] h-auto opacity-50"
-                style={{ filter: 'blur(80px) brightness(1.5)' }}
-              />
-              {/* Middle glow - pinky purple */}
-              <img 
-                src={heroBlob} 
-                alt="" 
-                className="absolute w-[105%] h-auto opacity-60"
-                style={{ filter: 'blur(50px) brightness(1.4)' }}
-              />
-              {/* Inner glow - pinky purple */}
-              <img 
-                src={heroBlob} 
-                alt="" 
-                className="absolute w-full h-auto opacity-70"
-                style={{ filter: 'blur(30px) brightness(1.3)' }}
-              />
-            </div>
-            {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
               opacity={0.675}
-              className="w-full h-auto relative z-10"
+              className="w-full h-auto"
             />
           </div>
 
