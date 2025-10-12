@@ -143,8 +143,8 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(35% - 235pt)',
-              left: 'calc(2.5rem + 88pt)',
+              top: 'calc(35% - 435pt)',
+              left: 'calc(2.5rem + 108pt)',
               width: '16rem',
               height: '16rem'
             }}
