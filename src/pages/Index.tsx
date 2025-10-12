@@ -17,22 +17,22 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-24 left-32">
+          <SMSBubble delay={0} className="absolute top-24 left-48">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-16 right-32">
+          <SMSBubble delay={1.5} className="absolute top-16 right-48">
             ✨
           </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-1/3 left-28">
+          <SMSBubble delay={2.5} className="absolute top-1/3 left-44">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-1/3 right-28">
+          <SMSBubble delay={1} className="absolute bottom-1/3 right-44">
             💅
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-24 left-32">
+          <SMSBubble delay={3} className="absolute bottom-24 left-48">
             💕
           </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-16 right-28">
+          <SMSBubble delay={2} className="absolute bottom-16 right-44">
             🌟
           </SMSBubble>
         </div>
