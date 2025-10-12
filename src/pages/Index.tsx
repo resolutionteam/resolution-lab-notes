@@ -40,26 +40,29 @@ const Index = () => {
         {/* Halo effect - behind everything */}
         <div className="absolute inset-0 flex items-center justify-center z-0">
           <div className="relative w-full max-w-md mx-auto">
-            {/* Outer glow - pink */}
-            <img 
-              src={heroBlob} 
-              alt="" 
-              className="absolute w-[108%] h-auto opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(80px) brightness(1.5) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
+            {/* Outer glow - hot pink */}
+            <div 
+              className="absolute w-96 h-96 opacity-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ 
+                background: 'radial-gradient(circle, #FF2CA8 0%, #9B4DCA 40%, transparent 70%)',
+                filter: 'blur(80px)'
+              }}
             />
-            {/* Middle glow - pink */}
-            <img 
-              src={heroBlob} 
-              alt="" 
-              className="absolute w-[105%] h-auto opacity-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(50px) brightness(1.4) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
+            {/* Middle glow - hot pink */}
+            <div 
+              className="absolute w-80 h-80 opacity-60 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ 
+                background: 'radial-gradient(circle, #FF2CA8 0%, #E91E8C 50%, transparent 80%)',
+                filter: 'blur(50px)'
+              }}
             />
-            {/* Inner glow - pink */}
-            <img 
-              src={heroBlob} 
-              alt="" 
-              className="absolute w-full h-auto opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-              style={{ filter: 'blur(30px) brightness(1.3) sepia(0.8) saturate(3) hue-rotate(320deg)' }}
+            {/* Inner glow - hot pink */}
+            <div 
+              className="absolute w-64 h-64 opacity-70 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{ 
+                background: 'radial-gradient(circle, #FF2CA8 0%, #FF66C4 60%, transparent 90%)',
+                filter: 'blur(30px)'
+              }}
             />
           </div>
         </div>
