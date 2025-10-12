@@ -260,36 +260,36 @@ const Index = () => {
 
         {/* Floating color blobs */}
         <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel yellow blob - mid-top left */}
+          {/* Pastel purple blob - mid-top right */}
           <div 
-            className="absolute top-1/4 left-16 w-64 h-64 rounded-full blur-3xl"
+            className="absolute top-1/4 right-16 w-64 h-64 rounded-full blur-3xl"
             style={{ 
-              background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
+              background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
+              boxShadow: '0 0 80px 40px hsl(290, 75%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform'
             }}
           />
           
-          {/* Baby pink blob - bottom right */}
+          {/* Pastel yellow blob - rightmost (bottom right) */}
           <div 
             className="absolute bottom-1/4 right-20 w-72 h-72 rounded-full blur-3xl"
             style={{ 
-              background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
-              boxShadow: '0 0 100px 50px hsl(340, 100%, 85% / 0.4)',
+              background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
+              boxShadow: '0 0 100px 50px hsl(50, 100%, 80% / 0.4)',
               animation: 'float 10s ease-in-out infinite',
               animationDelay: '2s',
               willChange: 'transform'
             }}
           />
           
-          {/* Pastel purple blob - middle */}
+          {/* Baby pink blob - bottom middle */}
           <div 
             className="absolute top-1/2 left-1/2 w-56 h-56 rounded-full blur-3xl"
             style={{ 
-              background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(290, 75%, 80% / 0.3)',
+              background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
+              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
               willChange: 'transform'
