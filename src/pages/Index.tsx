@@ -40,8 +40,8 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
           {/* "meet fabio" text above blob */}
-          <h2 className="text-4xl md:text-5xl font-display italic" style={{ color: '#FF2CA8' }}>
-            meet fabio
+          <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
+            meet <span style={{ color: '#FF2CA8' }}>fabio</span>
           </h2>
 
           {/* Hero blob */}
