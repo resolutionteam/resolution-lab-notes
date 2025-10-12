@@ -47,26 +47,26 @@ const Index = () => {
           <div className="relative w-full max-w-md mx-auto">
             {/* Multi-layered glow effect for enhanced halo - behind the blob */}
             <div className="absolute inset-0 flex items-center justify-center">
-              {/* Outer glow - most diffuse with cool tone */}
+              {/* Outer glow - pinky purple */}
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-[120%] h-auto opacity-50"
-                style={{ filter: 'blur(120px) brightness(1.5) hue-rotate(-10deg)' }}
+                className="absolute w-[108%] h-auto opacity-50"
+                style={{ filter: 'blur(80px) brightness(1.5)' }}
               />
-              {/* Middle glow with cool tone */}
+              {/* Middle glow - pinky purple */}
               <img 
                 src={heroBlob} 
                 alt="" 
-                className="absolute w-[110%] h-auto opacity-60"
-                style={{ filter: 'blur(80px) brightness(1.4) hue-rotate(-10deg)' }}
+                className="absolute w-[105%] h-auto opacity-60"
+                style={{ filter: 'blur(50px) brightness(1.4)' }}
               />
-              {/* Inner glow - most intense with cool tone */}
+              {/* Inner glow - pinky purple */}
               <img 
                 src={heroBlob} 
                 alt="" 
                 className="absolute w-full h-auto opacity-70"
-                style={{ filter: 'blur(50px) brightness(1.3) hue-rotate(-10deg)' }}
+                style={{ filter: 'blur(30px) brightness(1.3)' }}
               />
             </div>
             {/* Main blob */}
