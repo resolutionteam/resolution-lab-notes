@@ -208,14 +208,14 @@ const Index = () => {
             <div 
               className="p-4 md:p-5 relative max-w-sm"
               style={{
-                border: '2px solid rgba(196, 81, 232, 0.3)',
-                boxShadow: '0 0 30px rgba(196, 81, 232, 0.1), inset 0 0 30px rgba(196, 81, 232, 0.05)'
+                border: '2px solid rgba(196, 81, 232, 0.2)',
+                boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
             >
               <div className="absolute -top-2.5 left-4 px-2 py-0.5 bg-background">
                 <span className="text-[10px] font-body opacity-50 tracking-widest">[ our why ]</span>
               </div>
-              <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.7)' }}>
+              <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.5)' }}>
                 talking about your problems helps you heal before they take you to the doctor.
               </p>
             </div>
