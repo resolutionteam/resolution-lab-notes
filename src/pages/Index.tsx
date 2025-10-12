@@ -182,7 +182,7 @@ const Index = () => {
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
             >
-              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
                 <span className="text-[8px] font-body opacity-50 tracking-wider">[ we are ]</span>
               </div>
               <p className="text-base md:text-xl font-body text-foreground leading-tight tracking-wide">
@@ -198,7 +198,7 @@ const Index = () => {
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
-              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
                 <span className="text-[8px] font-body opacity-50 tracking-wider">[ our bread & butter ]</span>
               </div>
               <p className="text-sm md:text-base font-body italic leading-relaxed" style={{ color: '#65C466' }}>
@@ -214,7 +214,7 @@ const Index = () => {
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
             >
-              <div className="absolute -top-1.5 left-4 px-1 py-0 bg-background">
+              <div className="absolute top-0 left-4 -translate-y-1/2 px-2 py-0.5 bg-background">
                 <span className="text-[8px] font-body opacity-50 tracking-wider">[ our why ]</span>
               </div>
               <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.5)' }}>
