@@ -171,42 +171,42 @@ const Index = () => {
           </div>
 
           {/* Main content with lab readout aesthetic */}
-          <div className="space-y-12 max-w-2xl mx-auto px-4">
+          <div className="space-y-8 max-w-2xl mx-auto px-4">
             {/* Main headline in terminal box */}
             <div 
-              className="p-6 md:p-10 relative"
+              className="p-4 md:p-8 relative ml-auto max-w-full"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
             >
-              <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
+              <div className="absolute -top-2.5 left-4 px-2 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ we are ]</span>
               </div>
-              <p className="text-xl md:text-3xl font-body text-foreground leading-tight tracking-wide">
+              <p className="text-lg md:text-2xl font-body text-foreground leading-tight tracking-wide">
                 the AI support system for girls who feel everything.
               </p>
             </div>
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-6 md:p-8 relative ml-auto max-w-full md:max-w-xl"
+              className="p-4 md:p-6 relative ml-auto max-w-full md:max-w-xl"
               style={{
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
-              <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
+              <div className="absolute -top-2.5 left-4 px-2 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ our bread & butter ]</span>
               </div>
-              <p className="text-base md:text-xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
+              <p className="text-sm md:text-lg font-body italic leading-relaxed" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
               </p>
             </div>
             
             {/* Our why box - smaller */}
             <div 
-              className="p-5 md:p-6 relative max-w-xs ml-auto"
+              className="p-4 md:p-5 relative max-w-full md:max-w-xs ml-auto"
               style={{
                 border: '2px solid rgba(196, 81, 232, 0.2)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
