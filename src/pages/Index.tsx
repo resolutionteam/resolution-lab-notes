@@ -48,7 +48,7 @@ const Index = () => {
           <div className="relative w-full max-w-xl mx-auto">
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.506}
+              opacity={0.556}
               className="w-full h-auto"
             />
           </div>
