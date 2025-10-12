@@ -182,41 +182,62 @@ const Index = () => {
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10">
-          {/* Header - serif, simple purple */}
-          <h1 
-            className="text-5xl md:text-6xl font-display italic font-bold mb-24 text-center tracking-tight"
-            style={{ 
-              color: 'hsl(290, 75%, 62%)',
-              animation: 'float 6s ease-in-out infinite'
-            }}
-          >
-            welcome to resolution labs.
-          </h1>
-
-          {/* Asymmetric layout with dramatic typography */}
-          <div className="space-y-20">
-            {/* Main headline - centered, monospace, layered transparency */}
-            <p 
-              className="text-5xl md:text-6xl font-body font-bold text-foreground leading-tight max-w-4xl mx-auto tracking-tight text-center"
+          {/* Header with terminal aesthetic */}
+          <div className="mb-16">
+            <div 
+              className="inline-block px-8 py-4 relative"
               style={{
-                opacity: 0.85
+                background: 'rgba(0, 0, 0, 0.3)',
+                border: '1px solid rgba(196, 81, 232, 0.3)',
+                boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
             >
-              the AI support system for girls who feel everything.
-            </p>
+              <div className="absolute top-2 right-2 flex gap-1">
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-50" />
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
+              </div>
+              <h1 className="text-2xl md:text-3xl font-body text-hot-pink tracking-wider">
+                &gt; WELCOME_TO_RESOLUTION_LABS
+              </h1>
+            </div>
+          </div>
+
+          {/* Main content with lab readout aesthetic */}
+          <div className="space-y-12 max-w-4xl mx-auto">
+            {/* Main headline in terminal box */}
+            <div 
+              className="p-8 md:p-12 relative"
+              style={{
+                background: 'rgba(0, 0, 0, 0.2)',
+                border: '2px solid rgba(107, 140, 255, 0.3)',
+                boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
+              }}
+            >
+              <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
+                <span className="text-xs font-body opacity-50 tracking-widest">[ PRIMARY_MISSION ]</span>
+              </div>
+              <p className="text-3xl md:text-4xl font-body text-foreground leading-tight tracking-wide">
+                the AI support system for girls who feel everything.
+              </p>
+            </div>
             
-            {/* Green subtext - centered, monospace, layered transparency */}
-            <p 
-              className="text-2xl md:text-3xl font-body font-bold italic leading-relaxed max-w-2xl mx-auto text-center" 
-              style={{ 
-                color: '#65C466',
-                opacity: 0.9
+            {/* Green subtext in terminal box */}
+            <div 
+              className="p-8 md:p-10 relative ml-auto max-w-2xl"
+              style={{
+                background: 'rgba(0, 0, 0, 0.2)',
+                border: '2px solid rgba(101, 196, 102, 0.3)',
+                boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
             >
-              we're building tools that make stress, love,
-              <br />
-              and health easier to talk about.
-            </p>
+              <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
+                <span className="text-xs font-body opacity-50 tracking-widest">[ OBJECTIVES ]</span>
+              </div>
+              <p className="text-xl md:text-2xl font-body italic leading-relaxed" style={{ color: '#65C466' }}>
+                we're building tools that make stress, love, and health easier to talk about.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -269,14 +290,19 @@ const Index = () => {
           {/* Bottom left bubble with glow */}
           <div className="absolute left-24 top-2/3">
             <div 
-              className="absolute inset-0 blur-3xl"
+              className="absolute blur-3xl pointer-events-none"
               style={{
-                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.4) 0%, transparent 70%)',
-                transform: 'scale(1.6)',
-                animation: 'pulse 4s ease-in-out infinite'
+                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.6) 0%, transparent 70%)',
+                width: '300px',
+                height: '300px',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                animation: 'pulse 4s ease-in-out infinite',
+                zIndex: -1
               }}
             />
-            <SMSBubble delay={2} className="relative">
+            <SMSBubble delay={2} className="relative z-10">
               {testimonials[2]}
             </SMSBubble>
           </div>
@@ -285,14 +311,19 @@ const Index = () => {
           {/* Top right bubble with glow */}
           <div className="absolute right-20 top-1/3">
             <div 
-              className="absolute inset-0 blur-3xl"
+              className="absolute blur-3xl pointer-events-none"
               style={{
-                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.4) 0%, transparent 70%)',
-                transform: 'scale(1.6)',
-                animation: 'pulse 4s ease-in-out infinite'
+                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.6) 0%, transparent 70%)',
+                width: '300px',
+                height: '300px',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                animation: 'pulse 4s ease-in-out infinite',
+                zIndex: -1
               }}
             />
-            <SMSBubble delay={1.5} className="relative">
+            <SMSBubble delay={1.5} className="relative z-10">
               {testimonials[1]}
             </SMSBubble>
           </div>
