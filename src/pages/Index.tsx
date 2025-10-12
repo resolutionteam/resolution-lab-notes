@@ -206,17 +206,17 @@ const Index = () => {
             
             {/* Our why box - smaller */}
             <div 
-              className="p-4 md:p-6 relative max-w-md mx-auto"
+              className="p-4 md:p-5 relative max-w-xs mx-auto"
               style={{
-                border: '2px solid rgba(196, 81, 232, 0.3)',
-                boxShadow: '0 0 40px rgba(196, 81, 232, 0.15), inset 0 0 40px rgba(196, 81, 232, 0.05)'
+                border: '2px solid rgba(196, 81, 232, 0.5)',
+                boxShadow: '0 0 30px rgba(196, 81, 232, 0.1), inset 0 0 30px rgba(196, 81, 232, 0.05)'
               }}
             >
               <div className="absolute -top-3 left-6 px-3 py-1 bg-background">
                 <span className="text-xs font-body opacity-50 tracking-widest">[ our why ]</span>
               </div>
-              <p className="text-sm md:text-base font-body text-foreground leading-relaxed">
-                talking about your problems helps you fix them before they take you to the doctor
+              <p className="text-xs md:text-sm font-body leading-relaxed" style={{ color: 'rgba(196, 81, 232, 0.9)' }}>
+                talking about your problems helps you heal before it makes you sick
               </p>
             </div>
           </div>
