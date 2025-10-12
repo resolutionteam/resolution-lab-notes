@@ -17,22 +17,22 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-24 left-20">
+          <SMSBubble delay={0} className="absolute top-24 left-32">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-16 right-24">
+          <SMSBubble delay={1.5} className="absolute top-16 right-32">
             ✨
           </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-1/3 left-16">
+          <SMSBubble delay={2.5} className="absolute top-1/3 left-28">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-1/3 right-16">
+          <SMSBubble delay={1} className="absolute bottom-1/3 right-28">
             💅
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-24 left-24">
+          <SMSBubble delay={3} className="absolute bottom-24 left-32">
             💕
           </SMSBubble>
-          <SMSBubble delay={2} className="absolute bottom-16 right-20">
+          <SMSBubble delay={2} className="absolute bottom-16 right-28">
             🌟
           </SMSBubble>
         </div>
@@ -148,7 +148,11 @@ const Index = () => {
             </p>
             
             <p className="text-xl md:text-2xl font-body font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
-              we're building tools that make stress, love, and health easier to talk about.
+              we're building tools that make
+              <br />
+              stress, love, and health
+              <br />
+              easier to talk about.
             </p>
           </div>
         </div>
