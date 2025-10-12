@@ -138,7 +138,7 @@ const Index = () => {
           
           {/* Baby pink blob */}
           <div 
-            className="absolute top-[60%] right-[15%] w-56 h-56 rounded-full blur-3xl"
+            className="absolute top-[45%] right-[25%] w-56 h-56 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(340, 100%, 85%) 0%, hsl(340, 100%, 90%) 100%)',
               boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.3)',
