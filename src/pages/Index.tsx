@@ -16,7 +16,7 @@ const Index = () => {
       {/* Section 1: Hero */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Subtle sci-fi grid background */}
-        <div className="absolute inset-0 pointer-events-none opacity-15">
+        <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
             className="absolute inset-0"
             style={{
@@ -77,7 +77,7 @@ const Index = () => {
       {/* Section 2: Welcome */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Subtle sci-fi grid background - same as other pages */}
-        <div className="absolute inset-0 pointer-events-none opacity-15">
+        <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
             className="absolute inset-0"
             style={{
@@ -226,7 +226,7 @@ const Index = () => {
       {/* Section 3: Community */}
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-20">
         {/* Subtle sci-fi grid background */}
-        <div className="absolute inset-0 pointer-events-none opacity-15">
+        <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
             className="absolute inset-0"
             style={{
