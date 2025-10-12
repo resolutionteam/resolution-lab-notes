@@ -207,10 +207,10 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-1.5 rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(107, 140, 255, 0.25)' }}
               >
-                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ we are ]</span>
+                <span className="text-[10px] leading-none font-body tracking-normal" style={{ color: 'rgba(107, 140, 255, 1)' }}>[ we are ]</span>
               </div>
               <p className="text-base md:text-xl font-body text-foreground leading-tight tracking-wide mt-1">
                 the AI support system for girls who feel everything.
@@ -226,10 +226,10 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-1.5 rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(101, 196, 102, 0.25)' }}
               >
-                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our bread & butter ]</span>
+                <span className="text-[10px] leading-none font-body tracking-normal" style={{ color: '#65C466' }}>[ our bread & butter ]</span>
               </div>
               <p className="text-sm md:text-base font-body italic leading-relaxed mt-1" style={{ color: '#65C466' }}>
                 we're building tools that make stress, love, and health easier to talk about.
@@ -245,10 +245,10 @@ const Index = () => {
               }}
             >
               <div 
-                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-px rounded-[2px] bg-white border shadow-sm"
+                className="absolute top-0 left-3 md:left-4 -translate-y-1/2 inline-flex items-center justify-center px-1.5 py-1.5 rounded-[2px] bg-white border shadow-sm"
                 style={{ borderColor: 'rgba(196, 81, 232, 0.22)' }}
               >
-                <span className="text-[10px] leading-none font-body text-foreground/70 tracking-normal">[ our why ]</span>
+                <span className="text-[10px] leading-none font-body tracking-normal" style={{ color: 'rgba(196, 81, 232, 1)' }}>[ our why ]</span>
               </div>
               <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.5)' }}>
                 talking about your problems helps you heal before they take you to the doctor.
