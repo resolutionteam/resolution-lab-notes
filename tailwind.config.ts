@@ -57,6 +57,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "hot-pink": "hsl(var(--hot-pink))",
+        "bright-green": "hsl(var(--bright-green))",
+      },
+      fontFamily: {
+        display: ['Libre Baskerville', 'serif'],
+        body: ['IBM Plex Mono', 'monospace'],
+        ui: ['Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -84,6 +91,8 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "float": "float 8s ease-in-out infinite",
+        "float-bubble": "float-bubble 6s ease-in-out infinite",
       },
     },
   },
