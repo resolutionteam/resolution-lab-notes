@@ -50,7 +50,7 @@ const Index = () => {
 
 
         {/* Content */}
-        <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8 relative z-10">
           {/* "meet fabio" text above blob */}
           <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
             meet <span style={{ color: '#C451E8' }}>fabio</span>
@@ -66,7 +66,7 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="text-xl md:text-2xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
             your sassy bestie who helps you see your relationships for what they are:
             <br />
             <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
@@ -310,7 +310,7 @@ const Index = () => {
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-[3%] top-[59%] md:left-24 md:top-[68%]">
+          <div className="absolute left-[3%] top-[52%] md:left-24 md:top-[60%]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
