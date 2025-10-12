@@ -143,7 +143,7 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: '35%'
+              top: 'calc(35% - 10pt)'
             }}
           />
           
@@ -176,7 +176,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16">
+          <div className="mb-16" style={{ marginTop: '-10pt' }}>
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
