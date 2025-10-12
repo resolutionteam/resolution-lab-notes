@@ -27,22 +27,20 @@ const Index = () => {
         </div>
 
         {/* Subtle scanning lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '20%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '0s'
             }}
           />
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '60%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '2s'
@@ -111,22 +109,20 @@ const Index = () => {
         </div>
 
         {/* Subtle scanning lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '25%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '1s'
             }}
           />
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '70%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '3s'
@@ -246,22 +242,20 @@ const Index = () => {
         </div>
 
         {/* Subtle scanning lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '15%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '4s'
             }}
           />
           <div 
-            className="absolute w-1 opacity-10"
+            className="absolute h-full w-1"
             style={{
               left: '80%',
-              height: '30vh',
               background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
               animation: 'scan 8s ease-in-out infinite',
               animationDelay: '6s'
