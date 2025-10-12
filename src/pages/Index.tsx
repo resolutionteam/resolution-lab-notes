@@ -390,7 +390,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-2 px-6">
+          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-2pt)] px-6">
             join our community →
           </Button>
         </div>
