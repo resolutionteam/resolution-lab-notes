@@ -17,19 +17,19 @@ const Index = () => {
       <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
         {/* Floating SMS bubbles in background */}
         <div className="absolute inset-0 pointer-events-none">
-          <SMSBubble delay={0} className="absolute top-20 left-[15%]">
+          <SMSBubble delay={0} className="absolute top-20 left-[20%]">
             💬
           </SMSBubble>
-          <SMSBubble delay={1.5} className="absolute top-16 right-[12%]">
+          <SMSBubble delay={1.5} className="absolute top-24 right-[12%]">
             ✨
           </SMSBubble>
-          <SMSBubble delay={2.5} className="absolute top-[40%] left-[20%]">
+          <SMSBubble delay={2.5} className="absolute top-[45%] left-[15%]">
             🎀
           </SMSBubble>
-          <SMSBubble delay={1} className="absolute bottom-[35%] right-[15%]">
+          <SMSBubble delay={1} className="absolute bottom-[40%] right-[15%]">
             💅
           </SMSBubble>
-          <SMSBubble delay={3} className="absolute bottom-24 left-[18%]">
+          <SMSBubble delay={3} className="absolute bottom-24 left-[14%]">
             💕
           </SMSBubble>
           <SMSBubble delay={2} className="absolute bottom-20 right-[20%]">
@@ -72,7 +72,7 @@ const Index = () => {
             {/* Main blob */}
             <FloatingBlob 
               image={heroBlob} 
-              opacity={0.28}
+              opacity={1.0}
               className="w-full h-auto relative z-10"
             />
           </div>
