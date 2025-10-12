@@ -136,17 +136,14 @@ const Index = () => {
           {/* Pastel yellow blob */}
           <div 
             ref={yellowBlobRef}
-            className="absolute rounded-full blur-3xl"
+            className="absolute left-10 w-64 h-64 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(35% - 435pt)',
-              left: 'calc(2.5rem + 108pt)',
-              width: '16rem',
-              height: '16rem'
+              top: '35%'
             }}
           />
           
@@ -179,7 +176,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16" style={{ marginTop: '-300pt' }}>
+          <div className="mb-16">
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
@@ -393,7 +390,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-15pt)] px-6">
+          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-4pt)] px-6">
             join our community →
           </Button>
         </div>
