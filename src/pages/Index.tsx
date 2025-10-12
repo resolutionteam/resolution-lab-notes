@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <div className="w-full">
       {/* Section 1: Hero */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
+      <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-32 pb-16">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
@@ -75,7 +75,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Welcome */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-8">
         {/* Subtle sci-fi grid background - same as other pages */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
