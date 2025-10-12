@@ -293,8 +293,7 @@ const Index = () => {
               animation: 'float 9s ease-in-out infinite',
               animationDelay: '1.5s',
               willChange: 'transform',
-              left: '45%',
-              transform: 'translate(-50%, -50%)'
+              left: 'calc(50% - 7rem)'
             }}
           />
         </div>
@@ -331,24 +330,11 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-          <div className="absolute right-[8%] top-[29%] md:right-20 md:top-[24%]">
-            <div 
-              className="absolute blur-3xl pointer-events-none"
-              style={{
-                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.6) 0%, transparent 70%)',
-                width: '300px',
-                height: '300px',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                animation: 'pulse 4s ease-in-out infinite',
-                zIndex: -1
-              }}
-            />
-            <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-sm md:text-base">
-              {testimonials[1]}
-            </SMSBubble>
-          </div>
+            <div className="absolute right-[8%] top-[29%] md:right-20 md:top-[24%]">
+              <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-sm md:text-base">
+                {testimonials[1]}
+              </SMSBubble>
+            </div>
           
           <SMSBubble 
             delay={3} 
