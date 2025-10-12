@@ -113,13 +113,14 @@ const Index = () => {
         <div className="absolute inset-0 pointer-events-none opacity-60">
           {/* Pastel yellow blob */}
           <div 
-            className="absolute top-20 left-10 w-64 h-64 rounded-full blur-3xl"
+            className="absolute left-10 w-64 h-64 rounded-full blur-3xl"
             style={{ 
               background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
               boxShadow: '0 0 80px 40px hsl(50, 100%, 80% / 0.3)',
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
-              willChange: 'transform'
+              willChange: 'transform',
+              top: 'calc(5rem + 5pt)'
             }}
           />
           
