@@ -144,11 +144,24 @@ const Index = () => {
 
           {/* Main content with staggered layout */}
           <div className="space-y-16">
-            <p className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight max-w-3xl">
+            <p 
+              className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight max-w-3xl"
+              style={{
+                textShadow: '0 0 40px rgba(196, 81, 232, 0.15)',
+                letterSpacing: '-0.02em'
+              }}
+            >
               the AI support system for girls who feel everything.
             </p>
             
-            <p className="text-xl md:text-2xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" style={{ color: '#65C466' }}>
+            <p 
+              className="text-xl md:text-2xl font-ui font-bold leading-relaxed max-w-2xl ml-auto" 
+              style={{ 
+                color: '#65C466',
+                textShadow: '0 0 30px rgba(101, 196, 102, 0.3)',
+                letterSpacing: '-0.01em'
+              }}
+            >
               we're building tools that make stress, love,
               <br />
               and health easier to talk about.
