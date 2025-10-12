@@ -216,7 +216,7 @@ const Index = () => {
                 <span className="text-[10px] font-body opacity-50 tracking-widest">[ our why ]</span>
               </div>
               <p className="text-xs md:text-sm font-body leading-relaxed mt-2" style={{ color: 'rgba(196, 81, 232, 0.9)' }}>
-                Talking about your problems helps you heal before they take you to the doctor.
+                talking about your problems helps you heal before they take you to the doctor.
               </p>
             </div>
           </div>
