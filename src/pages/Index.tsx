@@ -14,7 +14,7 @@ const Index = () => {
   return (
     <div className="w-full">
       {/* Section 1: Hero */}
-      <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-[7rem] pb-0">
+      <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-32 pb-0">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
@@ -50,14 +50,14 @@ const Index = () => {
 
 
         {/* Content */}
-        <div className="max-w-4xl mx-auto text-center space-y-1 relative z-10">
+        <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           {/* "meet fabio" text above blob */}
           <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
             meet <span style={{ color: '#C451E8' }}>fabio</span>
           </h2>
 
           {/* Hero blob */}
-          <div className="relative w-full max-w-md mx-auto">
+          <div className="relative w-full max-w-xl mx-auto">
             <FloatingBlob 
               image={heroBlob} 
               opacity={0.556}
