@@ -143,8 +143,8 @@ const Index = () => {
               animation: 'float 8s ease-in-out infinite',
               animationDelay: '0s',
               willChange: 'transform',
-              top: 'calc(35% - 25pt)',
-              left: 'calc(2.5rem + 8pt)',
+              top: 'calc(35% - 55pt)',
+              left: 'calc(2.5rem + 28pt)',
               width: '16rem',
               height: '16rem'
             }}
@@ -179,7 +179,7 @@ const Index = () => {
 
         <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
-          <div className="mb-16" style={{ marginTop: '-20pt' }}>
+          <div className="mb-16" style={{ marginTop: '-40pt' }}>
             <div 
               className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
@@ -393,7 +393,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-7pt)] px-6">
+          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-15pt)] px-6">
             join our community →
           </Button>
         </div>
