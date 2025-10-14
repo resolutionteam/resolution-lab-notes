@@ -107,18 +107,18 @@ const About = () => {
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block px-6 md:px-8 py-4 relative mx-auto"
+              className="inline-block px-8 md:px-10 py-5 md:py-6 relative mx-auto"
               style={{
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
             >
               <div className="absolute top-2 right-2 flex gap-1">
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-50" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
+                <div className="w-2.5 h-2.5 rounded-full bg-hot-pink opacity-50" />
+                <div className="w-2.5 h-2.5 rounded-full bg-hot-pink opacity-30" />
+                <div className="w-2.5 h-2.5 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="text-base md:text-[26px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
+              <h1 className="text-xl md:text-[26px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
