@@ -155,7 +155,8 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute left-[8%] top-[18%] md:left-24 md:top-[18%] max-w-[60%] text-sm md:text-base"
+            className="absolute top-[18%] md:top-[18%] max-w-[60%] text-sm md:text-base"
+            style={{ left: 'calc(8% + 15pt)' }}
           >
             {testimonials[0]}
           </SMSBubble>
@@ -206,7 +207,7 @@ const Index = () => {
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
-          <Button variant="cta" size="lg" className="font-ui text-xs md:text-sm italic py-[calc(0.5rem-4pt)] px-6">
+          <Button variant="cta" size="sm" className="font-ui text-xs md:text-sm italic">
             join our community →
           </Button>
         </div>
