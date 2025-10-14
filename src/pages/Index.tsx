@@ -191,7 +191,7 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-[8%] bottom-[calc(14%+40pt)] md:right-24 md:bottom-[calc(16%+40pt)]"
+            className="absolute right-[8%] bottom-[calc(14%+60pt)] md:right-24 md:bottom-[calc(16%+60pt)]"
           >
             {testimonials[3]}
           </SMSBubble>
