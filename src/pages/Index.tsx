@@ -183,7 +183,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-            <div className="absolute right-[8%] top-[calc(29%+40pt)] md:right-20 md:top-[calc(24%+40pt)]">
+            <div className="absolute right-[8%] top-[calc(29%+60pt)] md:right-20 md:top-[calc(24%+60pt)]">
               <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-sm md:text-base">
                 {testimonials[1]}
               </SMSBubble>
