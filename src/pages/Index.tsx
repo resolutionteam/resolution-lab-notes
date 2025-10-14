@@ -155,7 +155,7 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute top-[calc(18%+80pt)] md:top-[calc(18%+80pt)] max-w-[60%] text-sm md:text-base"
+            className="absolute top-[calc(18%+95pt)] md:top-[calc(18%+95pt)] max-w-[60%] text-sm md:text-base"
             style={{ left: 'calc(8% + 15pt)' }}
           >
             {testimonials[0]}
@@ -183,7 +183,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-            <div className="absolute right-[8%] top-[calc(29%+60pt)] md:right-20 md:top-[calc(24%+60pt)]">
+            <div className="absolute right-[8%] top-[calc(29%+75pt)] md:right-20 md:top-[calc(24%+75pt)]">
               <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-sm md:text-base">
                 {testimonials[1]}
               </SMSBubble>
