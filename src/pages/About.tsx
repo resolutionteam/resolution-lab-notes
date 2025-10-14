@@ -119,17 +119,17 @@ const About = () => {
                 <div className="w-2.5 h-2.5 rounded-full bg-hot-pink opacity-20" />
               </div>
               <h1 className="text-xl md:text-[26px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
-                &gt; WELCOME_TO_RESOLUTION_LABS
+                &gt; WELCOME_TO_<br className="md:hidden" />RESOLUTION_LABS
               </h1>
             </div>
           </div>
 
           {/* Main content with lab readout aesthetic */}
-          <div className="space-y-8 max-w-2xl mx-auto px-4">
+          <div className="space-y-8 max-w-2xl mx-auto px-6 md:px-4">
             {/* Main headline in terminal box */}
             <div 
               ref={topBoxRef}
-              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-lg"
+              className="p-3 md:p-4 relative ml-auto max-w-[90%] md:max-w-lg"
               style={{
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
@@ -148,7 +148,7 @@ const About = () => {
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-md"
+              className="p-3 md:p-4 relative ml-auto max-w-[85%] md:max-w-md"
               style={{
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
@@ -167,7 +167,7 @@ const About = () => {
             
             {/* Our why box - smaller */}
             <div 
-              className="p-3 relative max-w-full md:max-w-xs ml-auto"
+              className="p-3 relative max-w-[80%] md:max-w-xs ml-auto"
               style={{
                 border: '2px solid rgba(196, 81, 232, 0.2)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
