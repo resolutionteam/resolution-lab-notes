@@ -75,7 +75,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Community */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-[calc(2rem+40pt)] pb-8 -mt-96">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-8 -mt-96">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
@@ -155,14 +155,14 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute top-[calc(18%+95pt)] md:top-[calc(18%+95pt)] max-w-[60%] text-sm md:text-base"
+            className="absolute top-[18%] md:top-[18%] max-w-[60%] text-sm md:text-base"
             style={{ left: 'calc(8% + 15pt)' }}
           >
             {testimonials[0]}
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-[3%] top-[calc(64%-10pt)] md:left-24 md:top-[calc(70%-10pt)]">
+          <div className="absolute left-[3%] top-[calc(64%+8pt)] md:left-24 md:top-[calc(70%+8pt)]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -183,7 +183,7 @@ const Index = () => {
           
           {/* Right side bubbles */}
           {/* Top right bubble with glow */}
-            <div className="absolute right-[8%] top-[calc(29%+75pt)] md:right-20 md:top-[calc(24%+75pt)]">
+            <div className="absolute right-[8%] top-[29%] md:right-20 md:top-[24%]">
               <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-sm md:text-base">
                 {testimonials[1]}
               </SMSBubble>
@@ -191,7 +191,7 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-[8%] bottom-[calc(14%+50pt)] md:right-24 md:bottom-[calc(16%+50pt)]"
+            className="absolute right-[8%] bottom-[14%] md:right-24 md:bottom-[16%]"
           >
             {testimonials[3]}
           </SMSBubble>
