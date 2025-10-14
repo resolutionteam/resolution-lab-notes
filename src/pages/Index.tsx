@@ -202,8 +202,8 @@ const Index = () => {
           <p className="text-[14px] md:text-[20px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
             every week, we share our lab notes —
             <br />
-            <span className="font-bold">real stories from girls finally resolving</span>
-            <br />
+            <span className="font-bold">real stories from girls finally resolving </span>
+            <br className="hidden md:block" />
             <span className="font-bold">their medical mysteries.</span>
           </p>
 
