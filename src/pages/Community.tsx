@@ -16,7 +16,8 @@ const Community = () => {
         <div className="relative w-full max-w-2xl">
           <SMSBubble 
             delay={0} 
-            className="absolute -top-32 left-1/4 transform -translate-x-1/2"
+            className="absolute -top-32 transform -translate-x-1/2"
+            style={{ left: 'calc(25% + 5pt)' }}
           >
             {testimonials[0]}
           </SMSBubble>
@@ -50,7 +51,7 @@ const Community = () => {
           Every week, we share our lab notes — real stories from girls finally resolving their medical mysteries
         </p>
 
-        <Button variant="cta" size="lg" className="font-ui">
+        <Button variant="cta" size="default" className="font-ui">
           Join our community →
         </Button>
       </div>
