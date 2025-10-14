@@ -75,7 +75,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Community */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 py-8 -mt-96">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-[calc(2rem+40pt)] pb-8 -mt-96">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
