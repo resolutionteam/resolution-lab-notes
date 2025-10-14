@@ -103,23 +103,22 @@ const About = () => {
           />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '-30pt' }}>
+        <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block relative mx-auto"
+              className="inline-block px-6 md:px-8 py-4 relative mx-auto"
               style={{
-                padding: 'calc(1rem + 15pt) calc(2rem + 15pt)',
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
             >
               <div className="absolute top-2 right-2 flex gap-1">
-                <div className="rounded-full bg-hot-pink opacity-50" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
-                <div className="rounded-full bg-hot-pink opacity-30" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
-                <div className="rounded-full bg-hot-pink opacity-20" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-50" />
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
+                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
               </div>
-              <h1 className="font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt', fontSize: 'calc(1rem + 10pt)' }}>
+              <h1 className="text-base md:text-[26px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
@@ -130,9 +129,8 @@ const About = () => {
             {/* Main headline in terminal box */}
             <div 
               ref={topBoxRef}
-              className="relative ml-auto max-w-full md:max-w-lg"
+              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-lg"
               style={{
-                padding: 'calc(1rem + 5pt)',
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
@@ -150,9 +148,8 @@ const About = () => {
             
             {/* Green subtext in terminal box */}
             <div 
-              className="relative ml-auto max-w-full md:max-w-md"
+              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-md"
               style={{
-                padding: 'calc(1rem + 5pt)',
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
@@ -170,9 +167,8 @@ const About = () => {
             
             {/* Our why box - smaller */}
             <div 
-              className="relative max-w-full md:max-w-xs ml-auto"
+              className="p-3 relative max-w-full md:max-w-xs ml-auto"
               style={{
-                padding: 'calc(0.75rem + 5pt)',
                 border: '2px solid rgba(196, 81, 232, 0.2)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
