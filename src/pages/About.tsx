@@ -109,17 +109,17 @@ const About = () => {
             <div 
               className="inline-block relative mx-auto"
               style={{
-                padding: 'calc(1rem + 5pt) calc(2rem + 5pt)',
+                padding: 'calc(1rem + 15pt) calc(2rem + 15pt)',
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
             >
               <div className="absolute top-2 right-2 flex gap-1">
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-50" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-30" />
-                <div className="w-2 h-2 rounded-full bg-hot-pink opacity-20" />
+                <div className="rounded-full bg-hot-pink opacity-50" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
+                <div className="rounded-full bg-hot-pink opacity-30" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
+                <div className="rounded-full bg-hot-pink opacity-20" style={{ width: 'calc(0.5rem + 10pt)', height: 'calc(0.5rem + 10pt)' }} />
               </div>
-              <h1 className="text-base md:text-[26px] font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt' }}>
+              <h1 className="font-body text-hot-pink tracking-wider" style={{ marginLeft: '-5pt', fontSize: 'calc(1rem + 10pt)' }}>
                 &gt; WELCOME_TO_RESOLUTION_LABS
               </h1>
             </div>
