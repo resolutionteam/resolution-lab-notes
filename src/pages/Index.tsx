@@ -162,7 +162,7 @@ const Index = () => {
           </SMSBubble>
           
           {/* Bottom left bubble with glow */}
-          <div className="absolute left-[3%] top-[calc(64%-25pt)] md:left-24 md:top-[calc(70%-25pt)]">
+          <div className="absolute left-[3%] top-[calc(64%-10pt)] md:left-24 md:top-[calc(70%-10pt)]">
             <div 
               className="absolute blur-3xl pointer-events-none"
               style={{
@@ -191,7 +191,7 @@ const Index = () => {
           
           <SMSBubble 
             delay={3} 
-            className="absolute right-[8%] bottom-[calc(14%+60pt)] md:right-24 md:bottom-[calc(16%+60pt)]"
+            className="absolute right-[8%] bottom-[calc(14%+50pt)] md:right-24 md:bottom-[calc(16%+50pt)]"
           >
             {testimonials[3]}
           </SMSBubble>
