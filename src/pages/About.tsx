@@ -103,12 +103,13 @@ const About = () => {
           />
         </div>
 
-        <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '5pt' }}>
+        <div className="max-w-6xl mx-auto relative z-10" style={{ marginTop: '-30pt' }}>
           {/* Header with terminal aesthetic */}
           <div className="mb-16">
             <div 
-              className="inline-block px-6 md:px-8 py-4 relative mx-auto"
+              className="inline-block relative mx-auto"
               style={{
+                padding: 'calc(1rem + 5pt) calc(2rem + 5pt)',
                 border: '1px solid rgba(196, 81, 232, 0.3)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.2), inset 0 0 30px rgba(196, 81, 232, 0.1)'
               }}
@@ -129,8 +130,9 @@ const About = () => {
             {/* Main headline in terminal box */}
             <div 
               ref={topBoxRef}
-              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-lg"
+              className="relative ml-auto max-w-full md:max-w-lg"
               style={{
+                padding: 'calc(1rem + 5pt)',
                 border: '2px solid rgba(107, 140, 255, 0.3)',
                 boxShadow: '0 0 40px rgba(107, 140, 255, 0.15), inset 0 0 40px rgba(107, 140, 255, 0.05)'
               }}
@@ -148,8 +150,9 @@ const About = () => {
             
             {/* Green subtext in terminal box */}
             <div 
-              className="p-3 md:p-4 relative ml-auto max-w-full md:max-w-md"
+              className="relative ml-auto max-w-full md:max-w-md"
               style={{
+                padding: 'calc(1rem + 5pt)',
                 border: '2px solid rgba(101, 196, 102, 0.3)',
                 boxShadow: '0 0 40px rgba(101, 196, 102, 0.15), inset 0 0 40px rgba(101, 196, 102, 0.05)'
               }}
@@ -167,8 +170,9 @@ const About = () => {
             
             {/* Our why box - smaller */}
             <div 
-              className="p-3 relative max-w-full md:max-w-xs ml-auto"
+              className="relative max-w-full md:max-w-xs ml-auto"
               style={{
+                padding: 'calc(0.75rem + 5pt)',
                 border: '2px solid rgba(196, 81, 232, 0.2)',
                 boxShadow: '0 0 30px rgba(196, 81, 232, 0.08), inset 0 0 30px rgba(196, 81, 232, 0.03)'
               }}
