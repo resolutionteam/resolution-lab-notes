@@ -155,7 +155,7 @@ const Index = () => {
           {/* Left side bubbles */}
           <SMSBubble 
             delay={0} 
-            className="absolute top-[calc(18%+20pt)] md:top-[calc(18%+20pt)] max-w-[60%] text-sm md:text-base"
+            className="absolute top-[calc(18%+50pt)] md:top-[calc(18%+50pt)] max-w-[60%] text-sm md:text-base"
             style={{ left: 'calc(8% + 15pt)' }}
           >
             {testimonials[0]}
