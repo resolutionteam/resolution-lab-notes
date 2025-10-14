@@ -200,8 +200,7 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12 relative z-10 px-4">
           <p className="text-[14px] md:text-[20px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
-            every week, we share our lab notes —
-            <br />
+            every week, we share our lab notes — <br className="hidden md:block" />
             <span className="font-bold">real stories from girls finally resolving </span>
             <br className="hidden md:block" />
             <span className="font-bold">their medical mysteries.</span>
