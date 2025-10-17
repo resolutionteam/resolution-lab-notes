@@ -57,13 +57,18 @@ const Index = () => {
           </h2>
 
           {/* Hero blob */}
-          <div className="relative w-full max-w-xl mx-auto">
+          <a 
+            href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="relative w-full max-w-xl mx-auto block cursor-pointer hover:scale-105 transition-transform duration-300"
+          >
             <FloatingBlob 
               image={heroBlob} 
               opacity={0.556}
               className="w-full h-auto"
             />
-          </div>
+          </a>
 
           {/* Tagline below blob with colored text */}
           <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
@@ -75,7 +80,7 @@ const Index = () => {
       </section>
 
       {/* Section 2: Community */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-[calc(2rem+40pt)] pb-8 -mt-96">
+      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-[calc(2rem+80pt)] pb-8 -mt-96">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
