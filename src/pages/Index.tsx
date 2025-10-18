@@ -77,7 +77,7 @@ const Index = () => {
                 className="animate-pulse"
                 style={{ 
                   marginLeft: '10px',
-                  transform: 'scaleX(-1)',
+                  transform: 'scaleX(-1) rotate(-45deg)',
                   transformOrigin: 'center'
                 }}
               >
