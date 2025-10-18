@@ -68,7 +68,7 @@ const Index = () => {
               }}
             >
               <p 
-                className="text-sm font-body italic whitespace-nowrap"
+                className="text-[19px] font-display italic whitespace-nowrap"
                 style={{ color: '#C451E8' }}
               >
                 click here for
@@ -78,16 +78,16 @@ const Index = () => {
               
               {/* Cute looping arrow SVG */}
               <svg 
-                width="80" 
-                height="60" 
-                viewBox="0 0 80 60" 
+                width="100" 
+                height="70" 
+                viewBox="0 0 100 70" 
                 fill="none" 
                 className="animate-pulse"
                 style={{ marginRight: '-20px' }}
               >
                 {/* Winding looping path */}
                 <path 
-                  d="M 5 30 Q 20 10, 40 25 T 70 35 L 65 30 M 70 35 L 65 40" 
+                  d="M 5 35 Q 25 10, 50 30 T 90 40 L 85 35 M 90 40 L 85 45" 
                   stroke="#C451E8" 
                   strokeWidth="2" 
                   fill="none"
