@@ -78,7 +78,7 @@ const Index = () => {
               
               <p 
                 className="text-[19px] font-display italic whitespace-nowrap"
-                style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-15px' }}
+                style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
               >
                 click here for
                 <br />
