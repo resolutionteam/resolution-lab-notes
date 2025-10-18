@@ -64,7 +64,7 @@ const Index = () => {
               style={{ 
                 left: '10%',
                 top: 'calc(100% + 20px)',
-                transform: 'rotate(-5deg)',
+                transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
               }}
             >
@@ -77,7 +77,7 @@ const Index = () => {
                 className="animate-pulse"
                 style={{ 
                   marginLeft: '10px',
-                  transform: 'rotate(-85deg)',
+                  transform: 'rotate(-90deg)',
                   transformOrigin: '50% 50%'
                 }}
               >
