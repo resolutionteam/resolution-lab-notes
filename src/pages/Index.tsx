@@ -68,14 +68,18 @@ const Index = () => {
                 transformOrigin: 'top left'
               }}
             >
-              {/* Cute looping arrow SVG */}
+              {/* Cute looping arrow SVG pointing diagonally up */}
               <svg 
                 width="100" 
                 height="70" 
                 viewBox="0 0 100 70" 
                 fill="none" 
                 className="animate-pulse"
-                style={{ marginLeft: '10px' }}
+                style={{ 
+                  marginLeft: '10px',
+                  transform: 'rotate(-45deg) scaleX(-1)',
+                  transformOrigin: 'center'
+                }}
               >
                 {/* Winding looping path */}
                 <path 
@@ -89,7 +93,7 @@ const Index = () => {
               
               <p 
                 className="text-[19px] font-display italic whitespace-nowrap"
-                style={{ color: '#C451E8' }}
+                style={{ color: '#C451E8', marginTop: '-8px' }}
               >
                 click here for
                 <br />
