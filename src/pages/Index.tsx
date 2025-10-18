@@ -61,10 +61,8 @@ const Index = () => {
           <div className="relative w-full max-w-[20rem] mx-auto">
             {/* Early access text with arrow - positioned below blob on left */}
             <div 
-              className="hidden md:flex absolute flex-col items-start gap-2 animate-fade-in"
+              className="flex absolute flex-col items-start gap-2 animate-fade-in left-[5%] top-[calc(100%+5px)] md:left-[calc(10%+20px)] md:top-[calc(100%+10px)]"
               style={{ 
-                left: 'calc(10% + 20px)',
-                top: 'calc(100% + 10px)',
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
               }}
@@ -73,11 +71,11 @@ const Index = () => {
               <img 
                 src={arrowPurple}
                 alt=""
-                className="animate-pulse w-[72px] h-auto"
+                className="animate-pulse w-[52px] md:w-[72px] h-auto"
               />
               
               <p 
-                className="text-[19px] font-display italic whitespace-nowrap"
+                className="text-[15px] md:text-[19px] font-display italic whitespace-nowrap"
                 style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
               >
                 click here for
