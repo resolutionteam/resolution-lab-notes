@@ -76,7 +76,9 @@ const Index = () => {
                 fill="none" 
                 className="animate-pulse"
                 style={{ 
-                  marginLeft: '10px'
+                  marginLeft: '10px',
+                  transform: 'scaleX(-1)',
+                  transformOrigin: 'center'
                 }}
               >
                 <g transform="rotate(-135 50 35)">
