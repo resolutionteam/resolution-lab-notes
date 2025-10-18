@@ -2,6 +2,7 @@ import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
 import heroBlob from "@/assets/hero-blob-with-halo.png";
+import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
   const testimonials = [
@@ -68,31 +69,12 @@ const Index = () => {
                 transformOrigin: 'top left'
               }}
             >
-              {/* Simple curved arrow pointing up */}
-              <svg 
-                width="60" 
-                height="50" 
-                viewBox="0 0 60 50" 
-                fill="none"
-                className="animate-pulse"
-              >
-                {/* Curved arrow path */}
-                <path 
-                  d="M 10 45 Q 20 20, 35 10" 
-                  stroke="#C451E8" 
-                  strokeWidth="2.5" 
-                  fill="none"
-                  strokeLinecap="round"
-                />
-                {/* Arrow head */}
-                <path 
-                  d="M 35 10 L 30 15 M 35 10 L 40 13" 
-                  stroke="#C451E8" 
-                  strokeWidth="2.5" 
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
+              {/* Custom purple arrow pointing up */}
+              <img 
+                src={arrowPurple}
+                alt=""
+                className="animate-pulse w-[60px] h-auto"
+              />
               
               <p 
                 className="text-[19px] font-display italic whitespace-nowrap"
