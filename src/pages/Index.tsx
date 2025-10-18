@@ -68,30 +68,30 @@ const Index = () => {
                 transformOrigin: 'top left'
               }}
             >
-              {/* Cute looping arrow SVG pointing diagonally up-right */}
+              {/* Simple curved arrow pointing up */}
               <svg 
-                width="100" 
-                height="70" 
-                viewBox="0 0 100 70" 
+                width="60" 
+                height="50" 
+                viewBox="0 0 60 50" 
                 fill="none"
                 className="animate-pulse"
-                style={{ 
-                  marginLeft: '10px',
-                  transform: 'rotate(0deg)',
-                  transformOrigin: '50% 50%',
-                  transformBox: 'fill-box'
-                }}
               >
-                {/* Winding looping path */}
-                <g transform="rotate(-90 50 35)">
-                  <path 
-                    d="M 5 35 Q 25 10, 50 30 T 90 40 L 85 35 M 90 40 L 85 45" 
-                    stroke="#C451E8" 
-                    strokeWidth="2" 
-                    fill="none"
-                    strokeLinecap="round"
-                  />
-                </g>
+                {/* Curved arrow path */}
+                <path 
+                  d="M 10 45 Q 20 20, 35 10" 
+                  stroke="#C451E8" 
+                  strokeWidth="2.5" 
+                  fill="none"
+                  strokeLinecap="round"
+                />
+                {/* Arrow head */}
+                <path 
+                  d="M 35 10 L 30 15 M 35 10 L 40 13" 
+                  stroke="#C451E8" 
+                  strokeWidth="2.5" 
+                  fill="none"
+                  strokeLinecap="round"
+                />
               </svg>
               
               <p 
