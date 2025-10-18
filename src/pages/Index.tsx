@@ -63,7 +63,7 @@ const Index = () => {
               className="hidden md:flex absolute flex-col items-start gap-2 animate-fade-in"
               style={{ 
                 left: '10%',
-                top: 'calc(100% + 35px)',
+                top: 'calc(100% + 60px)',
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
               }}
@@ -119,7 +119,7 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '40pt' }}>
+          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '120pt' }}>
             your sassy bestie who helps you see your relationships for what they are:
             <br />
             <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
