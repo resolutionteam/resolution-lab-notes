@@ -1,7 +1,7 @@
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
-import heroBlob from "@/assets/fabio_1.png";
+import heroBlob from "@/assets/hero-blob-with-halo.png";
 
 const Index = () => {
   const testimonials = [
@@ -57,7 +57,7 @@ const Index = () => {
           </h2>
 
           {/* Hero blob with early access prompt */}
-          <div className="relative w-full max-w-[25.2rem] mx-auto">
+          <div className="relative w-full max-w-xl mx-auto">
             {/* Early access text with arrow - positioned to the left */}
             <div 
               className="hidden md:flex absolute flex-col items-end gap-2 animate-fade-in"
