@@ -64,7 +64,7 @@ const Index = () => {
               className="hidden md:flex absolute flex-col items-start gap-2 animate-fade-in"
               style={{ 
                 left: '10%',
-                top: 'calc(100% + 70px)',
+                top: 'calc(100% + 30px)',
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
               }}
