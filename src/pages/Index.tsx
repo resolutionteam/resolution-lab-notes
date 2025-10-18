@@ -76,19 +76,19 @@ const Index = () => {
                 fill="none" 
                 className="animate-pulse"
                 style={{ 
-                  marginLeft: '10px',
-                  transform: 'rotate(-135deg)',
-                  transformOrigin: 'center'
+                  marginLeft: '10px'
                 }}
               >
-                {/* Winding looping path */}
-                <path 
-                  d="M 5 35 Q 25 10, 50 30 T 90 40 L 85 35 M 90 40 L 85 45" 
-                  stroke="#C451E8" 
-                  strokeWidth="2" 
-                  fill="none"
-                  strokeLinecap="round"
-                />
+                <g transform="rotate(-135 50 35)">
+                  {/* Winding looping path */}
+                  <path 
+                    d="M 5 35 Q 25 10, 50 30 T 90 40 L 85 35 M 90 40 L 85 45" 
+                    stroke="#C451E8" 
+                    strokeWidth="2" 
+                    fill="none"
+                    strokeLinecap="round"
+                  />
+                </g>
               </svg>
               
               <p 
