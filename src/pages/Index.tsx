@@ -56,19 +56,54 @@ const Index = () => {
             meet <span style={{ color: '#C451E8' }}>fabio</span>
           </h2>
 
-          {/* Hero blob */}
-          <a 
-            href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="relative w-full max-w-xl mx-auto block cursor-pointer hover:scale-105 transition-transform duration-300"
-          >
-            <FloatingBlob 
-              image={heroBlob} 
-              opacity={0.556}
-              className="w-full h-auto"
-            />
-          </a>
+          {/* Hero blob with "click here" annotation */}
+          <div className="relative w-full max-w-4xl mx-auto flex items-center justify-center gap-8">
+            {/* Click here annotation - positioned to the left */}
+            <div className="hidden md:flex flex-col items-end relative animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <p className="text-lg font-display italic mb-2" style={{ color: '#C451E8' }}>
+                click here for<br />early access
+              </p>
+              {/* Cute winding arrow SVG */}
+              <svg 
+                width="120" 
+                height="80" 
+                viewBox="0 0 120 80" 
+                fill="none" 
+                className="absolute -right-8 top-12"
+                style={{ transform: 'rotate(-5deg)' }}
+              >
+                <path 
+                  d="M10 20 Q 40 10, 70 30 T 110 50" 
+                  stroke="#C451E8" 
+                  strokeWidth="2.5" 
+                  fill="none"
+                  strokeLinecap="round"
+                  className="animate-pulse"
+                />
+                {/* Arrow head */}
+                <path 
+                  d="M 110 50 L 105 45 M 110 50 L 105 55" 
+                  stroke="#C451E8" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+
+            {/* Hero blob */}
+            <a 
+              href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative w-full max-w-xl mx-auto block cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
+              <FloatingBlob 
+                image={heroBlob} 
+                opacity={0.556}
+                className="w-full h-auto"
+              />
+            </a>
+          </div>
 
           {/* Tagline below blob with colored text */}
           <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
