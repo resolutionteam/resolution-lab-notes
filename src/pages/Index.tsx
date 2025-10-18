@@ -57,7 +57,7 @@ const Index = () => {
           </h2>
 
           {/* Hero blob with early access prompt */}
-          <div className="relative w-full max-w-[25.2rem] mx-auto">
+          <div className="relative w-full max-w-[20rem] mx-auto">
             {/* Early access text with arrow - positioned below blob on left */}
             <div 
               className="hidden md:flex absolute flex-col items-start gap-2 animate-fade-in"
@@ -68,15 +68,6 @@ const Index = () => {
                 transformOrigin: 'top left'
               }}
             >
-              <p 
-                className="text-[19px] font-display italic whitespace-nowrap"
-                style={{ color: '#C451E8' }}
-              >
-                click here for
-                <br />
-                early access
-              </p>
-              
               {/* Cute looping arrow SVG */}
               <svg 
                 width="100" 
@@ -95,6 +86,15 @@ const Index = () => {
                   strokeLinecap="round"
                 />
               </svg>
+              
+              <p 
+                className="text-[19px] font-display italic whitespace-nowrap"
+                style={{ color: '#C451E8' }}
+              >
+                click here for
+                <br />
+                early access
+              </p>
             </div>
 
             <a 
