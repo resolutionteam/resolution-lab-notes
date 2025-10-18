@@ -73,12 +73,12 @@ const Index = () => {
               <img 
                 src={arrowPurple}
                 alt=""
-                className="animate-pulse w-[60px] h-auto"
+                className="animate-pulse w-[72px] h-auto"
               />
               
               <p 
                 className="text-[19px] font-display italic whitespace-nowrap"
-                style={{ color: '#C451E8', marginTop: '-8px' }}
+                style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-15px' }}
               >
                 click here for
                 <br />
