@@ -58,13 +58,14 @@ const Index = () => {
 
           {/* Hero blob with early access prompt */}
           <div className="relative w-full max-w-[25.2rem] mx-auto">
-            {/* Early access text with arrow - positioned to the left */}
+            {/* Early access text with arrow - positioned below blob on left */}
             <div 
-              className="hidden md:flex absolute flex-col items-end gap-2 animate-fade-in"
+              className="hidden md:flex absolute flex-col items-start gap-2 animate-fade-in"
               style={{ 
-                right: 'calc(100% + 30pt)',
-                top: '50%',
-                transform: 'translateY(-50%)'
+                left: '10%',
+                top: 'calc(100% + 20px)',
+                transform: 'rotate(-5deg)',
+                transformOrigin: 'top left'
               }}
             >
               <p 
@@ -83,7 +84,7 @@ const Index = () => {
                 viewBox="0 0 100 70" 
                 fill="none" 
                 className="animate-pulse"
-                style={{ marginRight: '-20px' }}
+                style={{ marginLeft: '10px' }}
               >
                 {/* Winding looping path */}
                 <path 
