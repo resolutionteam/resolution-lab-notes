@@ -71,7 +71,7 @@ const Index = () => {
               {/* Cute looping arrow SVG pointing diagonally up-right */}
               <svg 
                 width="100" 
-                height="56" 
+                height="46" 
                 viewBox="0 0 100 70" 
                 fill="none"
                 className="animate-pulse"
