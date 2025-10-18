@@ -68,28 +68,27 @@ const Index = () => {
                 transformOrigin: 'top left'
               }}
             >
-              {/* Cute windy loopy arrow pointing up */}
+              {/* Simple curved arrow pointing up */}
               <svg 
-                width="80" 
-                height="100" 
-                viewBox="0 0 80 100" 
+                width="60" 
+                height="50" 
+                viewBox="0 0 60 50" 
                 fill="none"
                 className="animate-pulse"
               >
-                {/* Whimsical curved path with loops */}
+                {/* Curved arrow path */}
                 <path 
-                  d="M 15 95 Q 5 75, 15 60 Q 25 45, 15 30 Q 5 15, 25 5" 
+                  d="M 10 45 Q 20 20, 35 10" 
                   stroke="#C451E8" 
-                  strokeWidth="2" 
+                  strokeWidth="2.5" 
                   fill="none"
                   strokeLinecap="round"
-                  strokeLinejoin="round"
                 />
-                {/* Cute arrow head */}
+                {/* Arrow head */}
                 <path 
-                  d="M 25 5 L 20 12 M 25 5 L 32 8" 
+                  d="M 35 10 L 30 15 M 35 10 L 40 13" 
                   stroke="#C451E8" 
-                  strokeWidth="2" 
+                  strokeWidth="2.5" 
                   fill="none"
                   strokeLinecap="round"
                 />
