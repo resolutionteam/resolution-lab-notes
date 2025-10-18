@@ -1,7 +1,7 @@
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { SMSBubble } from "@/components/ui/sms-bubble";
 import { Button } from "@/components/ui/button";
-import heroBlob from "@/assets/hero-blob-with-halo.png";
+import heroBlob from "@/assets/fabio_1.png";
 
 const Index = () => {
   const testimonials = [
