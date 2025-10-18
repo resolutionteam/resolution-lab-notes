@@ -56,19 +56,59 @@ const Index = () => {
             meet <span style={{ color: '#C451E8' }}>fabio</span>
           </h2>
 
-          {/* Hero blob */}
-          <a 
-            href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="relative w-full max-w-xl mx-auto block cursor-pointer hover:scale-105 transition-transform duration-300"
-          >
-            <FloatingBlob 
-              image={heroBlob} 
-              opacity={0.556}
-              className="w-full h-auto"
-            />
-          </a>
+          {/* Hero blob with early access prompt */}
+          <div className="relative w-full max-w-xl mx-auto">
+            {/* Early access text with arrow - positioned to the left */}
+            <div 
+              className="hidden md:flex absolute flex-col items-end gap-2 animate-fade-in"
+              style={{ 
+                right: 'calc(100% + 30pt)',
+                top: '50%',
+                transform: 'translateY(-50%)'
+              }}
+            >
+              <p 
+                className="text-sm font-body italic whitespace-nowrap"
+                style={{ color: '#C451E8' }}
+              >
+                click here for
+                <br />
+                early access
+              </p>
+              
+              {/* Cute looping arrow SVG */}
+              <svg 
+                width="80" 
+                height="60" 
+                viewBox="0 0 80 60" 
+                fill="none" 
+                className="animate-pulse"
+                style={{ marginRight: '-20px' }}
+              >
+                {/* Winding looping path */}
+                <path 
+                  d="M 5 30 Q 20 10, 40 25 T 70 35 L 65 30 M 70 35 L 65 40" 
+                  stroke="#C451E8" 
+                  strokeWidth="2" 
+                  fill="none"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </div>
+
+            <a 
+              href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="relative block cursor-pointer hover:scale-105 transition-transform duration-300"
+            >
+              <FloatingBlob 
+                image={heroBlob} 
+                opacity={0.556}
+                className="w-full h-auto"
+              />
+            </a>
+          </div>
 
           {/* Tagline below blob with colored text */}
           <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed">
