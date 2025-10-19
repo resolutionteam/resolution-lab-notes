@@ -53,7 +53,7 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           {/* "meet fabio" text above blob */}
-          <h2 className="text-4xl md:text-5xl font-display italic text-foreground">
+          <h2 className="text-3xl md:text-4xl font-display italic text-foreground">
             meet <span style={{ color: '#C451E8' }}>fabio</span>
           </h2>
 
