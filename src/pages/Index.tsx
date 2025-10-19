@@ -61,7 +61,7 @@ const Index = () => {
           <div className="relative w-full max-w-[16rem] mx-auto">
             {/* Early access text with arrow - positioned below blob on left */}
             <div 
-              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 bottom-[-6px] md:bottom-auto md:left-[calc(10%+50px)] md:top-[calc(100%+10px)]"
+              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 bottom-[-26px] md:bottom-auto md:left-[calc(10%+50px)] md:top-[calc(100%+30px)]"
               style={{ 
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
@@ -99,7 +99,7 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '140pt' }}>
+          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '100pt' }}>
             your sassy bestie who helps you see your relationships for what they are:
             <br />
             <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
