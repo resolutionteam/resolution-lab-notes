@@ -58,10 +58,10 @@ const Index = () => {
           </h2>
 
           {/* Hero blob with early access prompt */}
-          <div className="relative w-full max-w-[20rem] mx-auto">
+          <div className="relative w-full max-w-[16rem] mx-auto">
             {/* Early access text with arrow - positioned below blob on left */}
             <div 
-              className="flex absolute flex-col items-start gap-2 animate-fade-in left-[5%] top-[calc(100%+5px)] md:left-[calc(10%+20px)] md:top-[calc(100%+10px)]"
+              className="flex absolute flex-col items-start gap-2 animate-fade-in left-[calc(5%+30pt)] top-[calc(100%+5px)] md:left-[calc(10%+50px)] md:top-[calc(100%+10px)]"
               style={{ 
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
