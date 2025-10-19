@@ -99,7 +99,7 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '160pt' }}>
+          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '140pt' }}>
             your sassy bestie who helps you see your relationships for what they are:
             <br />
             <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>life savers</span> or <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>time wasters</span>.
