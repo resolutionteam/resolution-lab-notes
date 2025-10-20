@@ -99,10 +99,10 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '100pt' }}>
-            are you tired of men disrespecting you?
+          <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '100pt', fontSize: 'calc(1.125rem - 3pt)' }}>
+            are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
             <br />
-            Let your AI bestie, Fabio, fix your love life.
+            Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your love life.
           </p>
         </div>
       </section>
