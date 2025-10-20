@@ -58,10 +58,10 @@ const Index = () => {
           </h2>
 
           {/* Hero blob with early access prompt */}
-          <div className="relative w-full max-w-[16rem] mx-auto pb-10 md:pb-24">
+          <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12">
             {/* Early access text with arrow - positioned below blob on left */}
             <div 
-              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 bottom-[-1px] md:bottom-auto md:left-[calc(10%+50px)] md:top-[calc(100%+5px)]"
+              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-6px] md:bottom-[-4px]"
               style={{ 
                 transform: 'rotate(0deg)',
                 transformOrigin: 'top left'
@@ -99,7 +99,7 @@ const Index = () => {
           </div>
 
           {/* Tagline below blob with colored text */}
-          <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-4 md:mt-6" style={{ fontSize: 'calc(1.125rem - 1pt)' }}>
+          <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5" style={{ fontSize: 'calc(1.125rem - 1pt)' }}>
             are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
             <br />
             Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your situationship.
