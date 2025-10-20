@@ -100,9 +100,9 @@ const Index = () => {
 
           {/* Tagline below blob with colored text */}
           <p className="text-lg md:text-xl font-body text-foreground max-w-2xl mx-auto leading-relaxed" style={{ marginTop: '100pt' }}>
-            Stop guessing if you're <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>"too much"</span> or <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>"too sensitive."</span>
+            are you tired of men disrespecting you?
             <br />
-            <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio validates what your intuition is telling you.</span>
+            Let your AI bestie, Fabio, fix your love life.
           </p>
         </div>
       </section>
@@ -234,9 +234,7 @@ const Index = () => {
         <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12 relative z-10 px-4">
           <p className="text-[14px] md:text-[20px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
             every week, we share our lab notes — <br className="hidden md:block" />
-            <span className="font-bold">real stories from girls finally resolving </span>
-            <br className="hidden md:block" />
-            <span className="font-bold">their medical mysteries.</span>
+            <span className="font-bold">real stories from girls who finally found the men they deserve.</span>
           </p>
 
           <Button variant="cta" size="sm" className="font-ui text-xs md:text-sm italic">
