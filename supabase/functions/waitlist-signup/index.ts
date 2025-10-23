@@ -166,6 +166,9 @@ Deno.serve(async (req) => {
     }
 
     // Get current waitlist count for position
+    // Position offset to start new signups at a higher number
+    const POSITION_OFFSET = 515;
+    
     console.log('Calculating waitlist position...');
     const { count, error: countError } = await supabase
       .from('waitlist')
@@ -185,7 +188,7 @@ Deno.serve(async (req) => {
       );
     }
 
-    const position = (count ?? 0) + 1;
+    const position = (count ?? 0) + 1 + POSITION_OFFSET;
     const newReferralCode = generateReferralCode(firstName, lastName);
     
     console.log(`New position: ${position}, Generated referral code: ${newReferralCode}`);
