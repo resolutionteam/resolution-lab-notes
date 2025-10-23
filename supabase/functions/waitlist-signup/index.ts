@@ -1,16 +1,29 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.39.3'
+import { z } from 'https://deno.land/x/zod@v3.22.4/mod.ts'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-interface SignupRequest {
-  firstName: string;
-  lastName: string;
-  phone: string;
-  referralCode?: string;
-}
+// Comprehensive validation schema
+const SignupSchema = z.object({
+  firstName: z.string()
+    .trim()
+    .min(1, 'First name is required')
+    .max(50, 'First name must be less than 50 characters')
+    .regex(/^[a-zA-Z\s'-]+$/, 'First name can only contain letters, spaces, hyphens, and apostrophes'),
+  lastName: z.string()
+    .trim()
+    .min(1, 'Last name is required')
+    .max(50, 'Last name must be less than 50 characters')
+    .regex(/^[a-zA-Z\s'-]+$/, 'Last name can only contain letters, spaces, hyphens, and apostrophes'),
+  phone: z.string()
+    .regex(/^\d{10}$/, 'Phone number must be exactly 10 digits'),
+  referralCode: z.string()
+    .regex(/^[A-Z]{2}_[A-Z0-9]{6}$/, 'Invalid referral code format')
+    .optional()
+})
 
 function generateReferralCode(firstName: string, lastName: string): string {
   const random = Math.random().toString(36).substring(2, 8).toUpperCase();
@@ -60,19 +73,31 @@ Deno.serve(async (req) => {
       .from('rate_limits')
       .insert({ ip: clientIp, endpoint: 'waitlist-signup' });
 
-    const { firstName, lastName, phone, referralCode }: SignupRequest = await req.json();
+    const requestBody = await req.json();
+
+    // Validate and sanitize input using zod
+    let validatedData;
+    try {
+      validatedData = SignupSchema.parse(requestBody);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        console.log('Validation failed:', { errors: err.errors.map(e => e.message) });
+        return new Response(
+          JSON.stringify({ 
+            error: 'Invalid input data', 
+            details: err.errors.map(e => ({ field: e.path.join('.'), message: e.message }))
+          }),
+          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        );
+      }
+      throw err;
+    }
+
+    const { firstName, lastName, phone, referralCode } = validatedData;
 
     // Log request without exposing full phone number
-    const maskedPhone = phone ? phone.substring(0, 3) + '****' + phone.substring(phone.length - 2) : 'none';
+    const maskedPhone = phone.substring(0, 3) + '****' + phone.substring(phone.length - 2);
     console.log('Waitlist signup request:', { firstName, lastName, phone: maskedPhone, hasReferralCode: !!referralCode });
-
-    // Validate input
-    if (!firstName || !lastName || !phone) {
-      return new Response(
-        JSON.stringify({ error: 'Missing required fields' }),
-        { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-      );
-    }
 
     // Check if phone already exists
     const { data: existing, error: checkError } = await supabase
