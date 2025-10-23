@@ -1,8 +1,35 @@
+import { useState, useEffect } from "react";
 import { FloatingBlob } from "@/components/ui/floating-blob";
+import { WaitlistForm } from "@/components/WaitlistForm";
+import { WaitlistSuccess } from "@/components/WaitlistSuccess";
 import heroBlob from "@/assets/hero-blob-with-halo.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
+  const [showForm, setShowForm] = useState(false);
+  const [waitlistData, setWaitlistData] = useState<{
+    position: number;
+    referralCode: string;
+    firstName: string;
+  } | null>(null);
+  const [referralCode, setReferralCode] = useState<string | undefined>(undefined);
+
+  // Check for referral code in URL on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const ref = params.get('ref');
+    if (ref) {
+      setReferralCode(ref);
+    }
+  }, []);
+
+  const handleBlobClick = () => {
+    setShowForm(true);
+  };
+
+  const handleWaitlistSuccess = (position: number, referralCode: string, firstName: string) => {
+    setWaitlistData({ position, referralCode, firstName });
+  };
 
   return (
     <div className="w-full">
@@ -45,58 +72,86 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           {/* "meet fabio" text above blob */}
-          <h2 className="text-3xl md:text-4xl font-display italic text-foreground">
-            meet <span style={{ color: '#C451E8' }}>fabio</span>
-          </h2>
+          {!showForm && !waitlistData && (
+            <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
+              meet <span style={{ color: '#C451E8' }}>fabio</span>
+            </h2>
+          )}
 
-          {/* Hero blob with early access prompt */}
-          <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12">
-            {/* Early access text with arrow - positioned below blob on left */}
-            <div 
-              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-6px] md:bottom-[-4px]"
-              style={{ 
-                transform: 'rotate(0deg)',
-                transformOrigin: 'top left'
-              }}
-            >
-              {/* Custom purple arrow pointing up */}
-              <img 
-                src={arrowPurple}
-                alt=""
-                className="animate-pulse w-[52px] md:w-[72px] h-auto"
-              />
-              
-              <p 
-                className="text-[15px] md:text-[19px] font-display italic whitespace-nowrap"
-                style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
+          {/* Hero blob with early access prompt - hidden when form shows */}
+          {!showForm && !waitlistData && (
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+              {/* Early access text with arrow - positioned below blob on left */}
+              <div 
+                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-6px] md:bottom-[-4px]"
+                style={{ 
+                  transform: 'rotate(0deg)',
+                  transformOrigin: 'top left'
+                }}
               >
-                click here for
-                <br />
-                early access
-              </p>
+                {/* Custom purple arrow pointing up */}
+                <img 
+                  src={arrowPurple}
+                  alt=""
+                  className="animate-pulse w-[52px] md:w-[72px] h-auto"
+                />
+                
+                <p 
+                  className="text-[15px] md:text-[19px] font-display italic whitespace-nowrap"
+                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
+                >
+                  click here for
+                  <br />
+                  early access
+                </p>
+              </div>
+
+              <button 
+                onClick={handleBlobClick}
+                className="relative block cursor-pointer hover:scale-105 transition-transform duration-300 w-full"
+              >
+                <FloatingBlob 
+                  image={heroBlob} 
+                  opacity={0.556}
+                  className="w-full h-auto"
+                />
+              </button>
             </div>
+          )}
 
-            <a 
-              href="https://7xrpbu5cijf.typeform.com/to/NseVEuyt" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="relative block cursor-pointer hover:scale-105 transition-transform duration-300"
-            >
-              <FloatingBlob 
-                image={heroBlob} 
-                opacity={0.556}
-                className="w-full h-auto"
+          {/* Tagline - hidden when form shows */}
+          {!showForm && !waitlistData && (
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '20pt' }}>
+              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
+              <br />
+              <br />
+              Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your situationship.
+            </p>
+          )}
+
+          {/* Waitlist Form - shows after blob click */}
+          {showForm && !waitlistData && (
+            <div className="pt-8">
+              <h2 className="text-2xl md:text-3xl font-display italic text-foreground mb-8">
+                Join the <span style={{ color: '#C451E8' }}>waitlist</span>
+              </h2>
+              <WaitlistForm 
+                referralCode={referralCode}
+                onSuccess={handleWaitlistSuccess}
               />
-            </a>
-          </div>
+            </div>
+          )}
 
-          {/* Tagline below blob with colored text */}
-          <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '20pt' }}>
-            are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
-            <br />
-            <br />
-            Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your situationship.
-          </p>
+          {/* Success State - shows after successful signup */}
+          {waitlistData && (
+            <div className="pt-8">
+              <WaitlistSuccess 
+                position={waitlistData.position}
+                firstName={waitlistData.firstName}
+                referralCode={waitlistData.referralCode}
+              />
+            </div>
+          )}
         </div>
       </section>
 
