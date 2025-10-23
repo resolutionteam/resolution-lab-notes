@@ -29,9 +29,42 @@ Deno.serve(async (req) => {
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
     );
 
+    // Get client IP for rate limiting
+    const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
+                     req.headers.get('x-real-ip') || 
+                     'unknown';
+
+    // Check rate limit: max 5 attempts per minute per IP
+    const oneMinuteAgo = new Date(Date.now() - 60000).toISOString();
+    const { count: recentAttempts, error: rateLimitError } = await supabase
+      .from('rate_limits')
+      .select('*', { count: 'exact', head: true })
+      .eq('ip', clientIp)
+      .eq('endpoint', 'waitlist-signup')
+      .gte('created_at', oneMinuteAgo);
+
+    if (rateLimitError) {
+      console.error('Rate limit check error:', rateLimitError);
+    }
+
+    if (recentAttempts && recentAttempts >= 5) {
+      console.log('Rate limit exceeded for IP:', clientIp);
+      return new Response(
+        JSON.stringify({ error: 'Too many signup attempts. Please try again in 1 minute.' }),
+        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      );
+    }
+
+    // Log rate limit attempt
+    await supabase
+      .from('rate_limits')
+      .insert({ ip: clientIp, endpoint: 'waitlist-signup' });
+
     const { firstName, lastName, phone, referralCode }: SignupRequest = await req.json();
 
-    console.log('Waitlist signup request:', { firstName, lastName, phone, referralCode });
+    // Log request without exposing full phone number
+    const maskedPhone = phone ? phone.substring(0, 3) + '****' + phone.substring(phone.length - 2) : 'none';
+    console.log('Waitlist signup request:', { firstName, lastName, phone: maskedPhone, hasReferralCode: !!referralCode });
 
     // Validate input
     if (!firstName || !lastName || !phone) {
@@ -143,7 +176,12 @@ Deno.serve(async (req) => {
       }
     }
 
-    console.log('Waitlist signup successful:', newEntry);
+    // Log success without exposing PII
+    console.log('Waitlist signup successful:', { 
+      id: newEntry.id, 
+      position: newEntry.position,
+      hasReferralCode: !!newEntry.referral_code 
+    });
 
     return new Response(
       JSON.stringify({
