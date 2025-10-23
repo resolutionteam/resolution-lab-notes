@@ -94,6 +94,7 @@ const Index = () => {
           <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '20pt' }}>
             are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
             <br />
+            <br />
             Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your situationship.
           </p>
         </div>
