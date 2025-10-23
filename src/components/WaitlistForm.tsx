@@ -43,6 +43,9 @@ export const WaitlistForm = ({ referralCode, onSuccess }: WaitlistFormProps) => 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
+    // CLIENT-SIDE VALIDATION NOTE: This validation is for UX only.
+    // All security validation happens server-side in the edge function.
+    // Malicious users can bypass this by calling the API directly.
     if (!firstName.trim() || !lastName.trim() || !phone.trim()) {
       toast.error("Please fill in all fields");
       return;
@@ -68,13 +71,17 @@ export const WaitlistForm = ({ referralCode, onSuccess }: WaitlistFormProps) => 
 
       if (error) {
         console.error('Waitlist signup error:', error);
-        toast.error("Failed to join waitlist. Please try again.");
+        // Display specific error message if available
+        const errorMessage = error.message || "Failed to join waitlist. Please try again.";
+        toast.error(errorMessage);
         return;
       }
 
       if (data.error) {
         if (data.error === 'Phone number already registered') {
           toast.error("This phone number is already on the waitlist!");
+        } else if (data.error === 'Rate limit exceeded') {
+          toast.error("Too many attempts. Please wait a moment and try again.");
         } else {
           toast.error(data.error);
         }
@@ -105,9 +112,10 @@ export const WaitlistForm = ({ referralCode, onSuccess }: WaitlistFormProps) => 
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="Sarah"
-            className="bg-background/50 border-primary/20 focus:border-primary transition-colors"
+            className="bg-background/50 border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
             disabled={isSubmitting}
             required
+            maxLength={50}
           />
         </div>
 
@@ -121,9 +129,10 @@ export const WaitlistForm = ({ referralCode, onSuccess }: WaitlistFormProps) => 
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             placeholder="Johnson"
-            className="bg-background/50 border-primary/20 focus:border-primary transition-colors"
+            className="bg-background/50 border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
             disabled={isSubmitting}
             required
+            maxLength={50}
           />
         </div>
 
@@ -137,7 +146,7 @@ export const WaitlistForm = ({ referralCode, onSuccess }: WaitlistFormProps) => 
             value={phone}
             onChange={handlePhoneChange}
             placeholder="(555) 123-4567"
-            className="bg-background/50 border-primary/20 focus:border-primary transition-colors"
+            className="bg-background/50 border-primary/20 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
             disabled={isSubmitting}
             maxLength={14}
             required
