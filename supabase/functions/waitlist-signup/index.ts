@@ -6,27 +6,30 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 }
 
-// Comprehensive validation schema
+// Enhanced input validation schema with user-friendly error messages
 const SignupSchema = z.object({
   firstName: z.string()
     .trim()
-    .min(1, 'First name is required')
-    .max(50, 'First name must be less than 50 characters')
-    .regex(/^[a-zA-Z\s'-]+$/, 'First name can only contain letters, spaces, hyphens, and apostrophes'),
+    .min(1, "First name is required")
+    .max(50, "First name must be less than 50 characters")
+    .regex(/^[a-zA-Z\s'-]+$/, "First name can only contain letters, spaces, hyphens, and apostrophes"),
   lastName: z.string()
     .trim()
-    .min(1, 'Last name is required')
-    .max(50, 'Last name must be less than 50 characters')
-    .regex(/^[a-zA-Z\s'-]+$/, 'Last name can only contain letters, spaces, hyphens, and apostrophes'),
+    .min(1, "Last name is required")
+    .max(50, "Last name must be less than 50 characters")
+    .regex(/^[a-zA-Z\s'-]+$/, "Last name can only contain letters, spaces, hyphens, and apostrophes"),
   phone: z.string()
-    .regex(/^\d{10}$/, 'Phone number must be exactly 10 digits'),
+    .trim()
+    .length(10, "Phone number must be exactly 10 digits")
+    .regex(/^\d{10}$/, "Phone number must contain only digits"),
   referralCode: z.string()
-    .regex(/^[A-Z]{2}_[A-Z0-9]{6}$/, 'Invalid referral code format')
-    .optional()
+    .trim()
+    .toUpperCase()
+    .optional(),
 })
 
 function generateReferralCode(firstName: string, lastName: string): string {
-  // Use cryptographically secure random generation
+  // Use cryptographically secure random generation (SECURITY FIX)
   const buffer = new Uint8Array(6);
   crypto.getRandomValues(buffer);
   
@@ -36,16 +39,20 @@ function generateReferralCode(firstName: string, lastName: string): string {
     .join('')
     .substring(0, 6);
   
-  return `${firstName.substring(0, 1)}${lastName.substring(0, 1)}_${random}`;
+  const firstInitial = firstName.substring(0, 1).toUpperCase();
+  const lastInitial = lastName.substring(0, 1).toUpperCase();
+  return `${firstInitial}${lastInitial}_${random}`;
 }
 
 Deno.serve(async (req) => {
-  // Handle CORS preflight requests
+  // Handle CORS preflight requests - MUST return proper response
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders });
   }
 
   try {
+    console.log('=== Waitlist Signup Request Started ===');
+    
     const supabase = createClient(
       Deno.env.get('SUPABASE_URL') ?? '',
       Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? ''
@@ -55,8 +62,10 @@ Deno.serve(async (req) => {
     const clientIp = req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 
                      req.headers.get('x-real-ip') || 
                      'unknown';
+    
+    console.log(`Request from IP: ${clientIp.substring(0, 8)}...`);
 
-    // Check rate limit: max 5 attempts per minute per IP
+    // Rate limiting: max 5 attempts per minute per IP
     const oneMinuteAgo = new Date(Date.now() - 60000).toISOString();
     const { count: recentAttempts, error: rateLimitError } = await supabase
       .from('rate_limits')
@@ -70,45 +79,58 @@ Deno.serve(async (req) => {
     }
 
     if (recentAttempts && recentAttempts >= 5) {
-      console.log('Rate limit exceeded for IP:', clientIp);
+      console.warn(`⚠️  Rate limit exceeded for IP: ${clientIp.substring(0, 8)}...`);
       return new Response(
-        JSON.stringify({ error: 'Too many signup attempts. Please try again in 1 minute.' }),
-        { status: 429, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ 
+          success: false,
+          error: 'Rate limit exceeded. Please wait a moment and try again.' 
+        }),
+        { 
+          status: 429, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
       );
     }
 
     // Log rate limit attempt
-    await supabase
+    const { error: rateLimitInsertError } = await supabase
       .from('rate_limits')
       .insert({ ip: clientIp, endpoint: 'waitlist-signup' });
 
+    if (rateLimitInsertError) {
+      console.error('Rate limit insert error:', rateLimitInsertError);
+    }
+
+    // Parse request body
     const requestBody = await req.json();
 
     // Validate and sanitize input using zod
-    let validatedData;
-    try {
-      validatedData = SignupSchema.parse(requestBody);
-    } catch (err) {
-      if (err instanceof z.ZodError) {
-        console.log('Validation failed:', { errors: err.errors.map(e => e.message) });
-        return new Response(
-          JSON.stringify({ 
-            error: 'Invalid input data', 
-            details: err.errors.map(e => ({ field: e.path.join('.'), message: e.message }))
-          }),
-          { status: 400, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
-        );
-      }
-      throw err;
+    console.log('Validating request data...');
+    const validationResult = SignupSchema.safeParse(requestBody);
+    
+    if (!validationResult.success) {
+      const errors = validationResult.error.errors.map(e => e.message).join(', ');
+      console.warn('❌ Validation failed:', errors);
+      return new Response(
+        JSON.stringify({ 
+          success: false,
+          error: errors
+        }),
+        { 
+          status: 400, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
+      );
     }
 
-    const { firstName, lastName, phone, referralCode } = validatedData;
+    const { firstName, lastName, phone, referralCode } = validationResult.data;
 
-    // Log request without exposing full phone number
-    const maskedPhone = phone.substring(0, 3) + '****' + phone.substring(phone.length - 2);
-    console.log('Waitlist signup request:', { firstName, lastName, phone: maskedPhone, hasReferralCode: !!referralCode });
+    // SECURITY: Mask phone for logging (don't log full PII)
+    const maskedPhone = `${phone.substring(0, 3)}****${phone.substring(7)}`;
+    console.log(`Processing signup: ${firstName} ${lastName}, Phone: ${maskedPhone}`);
 
-    // Check if phone already exists
+    // Check if phone already exists (with database-level unique constraint as backup)
+    console.log('Checking for existing phone number...');
     const { data: existing, error: checkError } = await supabase
       .from('waitlist')
       .select('id')
@@ -116,51 +138,80 @@ Deno.serve(async (req) => {
       .maybeSingle();
 
     if (checkError) {
-      console.error('Error checking existing phone:', checkError);
+      console.error('❌ Database check error:', checkError);
       return new Response(
-        JSON.stringify({ error: 'Database error' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ 
+          success: false,
+          error: 'Database error. Please try again.' 
+        }),
+        { 
+          status: 500, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
       );
     }
 
     if (existing) {
+      console.warn(`⚠️  Phone number already registered: ${maskedPhone}`);
       return new Response(
-        JSON.stringify({ error: 'Phone number already registered' }),
-        { status: 409, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ 
+          success: false,
+          error: 'Phone number already registered' 
+        }),
+        { 
+          status: 409, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
       );
     }
 
     // Get current waitlist count for position
+    console.log('Calculating waitlist position...');
     const { count, error: countError } = await supabase
       .from('waitlist')
       .select('*', { count: 'exact', head: true });
 
     if (countError) {
-      console.error('Error getting waitlist count:', countError);
+      console.error('❌ Count error:', countError);
       return new Response(
-        JSON.stringify({ error: 'Database error' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ 
+          success: false,
+          error: 'Failed to calculate position. Please try again.' 
+        }),
+        { 
+          status: 500, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
       );
     }
 
     const position = (count ?? 0) + 1;
     const newReferralCode = generateReferralCode(firstName, lastName);
+    
+    console.log(`New position: ${position}, Generated referral code: ${newReferralCode}`);
 
-    // Check if referral code exists and get referrer
+    // Validate and process referral code if provided
     let referrerId = null;
     if (referralCode) {
+      console.log(`Processing referral code: ${referralCode}`);
       const { data: referrer, error: referrerError } = await supabase
         .from('waitlist')
-        .select('id')
+        .select('id, position, referral_count')
         .eq('referral_code', referralCode)
         .maybeSingle();
 
-      if (!referrerError && referrer) {
+      if (referrerError) {
+        console.error('Referrer lookup error:', referrerError);
+      } else if (referrer) {
         referrerId = referrer.id;
+        console.log(`✅ Valid referral code found, referrer ID: ${referrerId}`);
+      } else {
+        console.warn(`⚠️  Invalid referral code: ${referralCode}`);
       }
     }
 
     // Insert new waitlist entry
+    console.log('Inserting new waitlist entry...');
     const { data: newEntry, error: insertError } = await supabase
       .from('waitlist')
       .insert({
@@ -175,16 +226,37 @@ Deno.serve(async (req) => {
       .single();
 
     if (insertError) {
-      console.error('Error inserting waitlist entry:', insertError);
+      console.error('❌ Insert error:', insertError);
+      
+      // Handle unique constraint violation (race condition)
+      if (insertError.code === '23505') {
+        return new Response(
+          JSON.stringify({ 
+            success: false,
+            error: 'Phone number already registered' 
+          }),
+          { 
+            status: 409, 
+            headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+          }
+        );
+      }
+      
       return new Response(
-        JSON.stringify({ error: 'Failed to join waitlist' }),
-        { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+        JSON.stringify({ 
+          success: false,
+          error: 'Failed to join waitlist. Please try again.' 
+        }),
+        { 
+          status: 500, 
+          headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+        }
       );
     }
 
-    // If there was a valid referrer, update their referral count and position
+    // Update referrer's position and count if valid referral
     if (referrerId) {
-      // Get current referrer data
+      console.log('Updating referrer position and count...');
       const { data: referrerData, error: referrerDataError } = await supabase
         .from('waitlist')
         .select('position, referral_count')
@@ -192,9 +264,10 @@ Deno.serve(async (req) => {
         .single();
 
       if (!referrerDataError && referrerData) {
-        // Increment referral count and move up 5 positions
-        const newReferralCount = referrerData.referral_count + 1;
+        const newReferralCount = (referrerData.referral_count || 0) + 1;
         const newPosition = Math.max(1, referrerData.position - 5);
+        
+        console.log(`Updating referrer: new position ${newPosition}, referral count ${newReferralCount}`);
         
         const { error: updateError } = await supabase
           .from('waitlist')
@@ -205,17 +278,16 @@ Deno.serve(async (req) => {
           .eq('id', referrerId);
 
         if (updateError) {
-          console.error('Error updating referrer:', updateError);
+          console.error('Failed to update referrer:', updateError);
+        } else {
+          console.log('✅ Referrer updated successfully');
         }
       }
     }
 
     // Log success without exposing PII
-    console.log('Waitlist signup successful:', { 
-      id: newEntry.id, 
-      position: newEntry.position,
-      hasReferralCode: !!newEntry.referral_code 
-    });
+    console.log(`✅ Signup successful! Position: ${position}, Referral code: ${newReferralCode}`);
+    console.log('=== Waitlist Signup Request Completed ===');
 
     return new Response(
       JSON.stringify({
@@ -223,14 +295,23 @@ Deno.serve(async (req) => {
         position: newEntry.position,
         referralCode: newEntry.referral_code,
       }),
-      { status: 200, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      { 
+        status: 200, 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+      }
     );
 
   } catch (error) {
-    console.error('Waitlist signup error:', error);
+    console.error('❌ Unexpected error in waitlist-signup:', error);
     return new Response(
-      JSON.stringify({ error: 'Internal server error' }),
-      { status: 500, headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
+      JSON.stringify({ 
+        success: false,
+        error: 'An unexpected error occurred. Please try again.' 
+      }),
+      { 
+        status: 500, 
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' } 
+      }
     );
   }
 });

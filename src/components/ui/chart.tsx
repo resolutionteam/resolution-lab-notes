@@ -66,6 +66,11 @@ const ChartStyle = ({ id, config }: { id: string; config: ChartConfig }) => {
   }
 
   return (
+    // SECURITY NOTE: This dangerouslySetInnerHTML usage is safe because:
+    // 1. All data comes from static theme configuration (THEMES constant)
+    // 2. Chart IDs and colors are never derived from user input
+    // 3. The HTML is purely CSS variable declarations
+    // ⚠️  WARNING: If chart IDs or colors ever come from user input, this becomes a security risk!
     <style
       dangerouslySetInnerHTML={{
         __html: Object.entries(THEMES)

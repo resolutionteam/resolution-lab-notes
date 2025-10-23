@@ -33,6 +33,38 @@ const Index = () => {
 
   return (
     <div className="w-full">
+      {/* Back Arrow - Shows when in waitlist flow */}
+      {(showForm || waitlistData) && (
+        <button
+          onClick={() => {
+            setShowForm(false);
+            setWaitlistData(null);
+          }}
+          className="fixed top-6 left-6 md:top-8 md:left-8 z-50 p-3 transition-all duration-300 hover:scale-105 animate-fade-in"
+          style={{
+            color: '#C451E8',
+            border: '1px solid rgba(196, 81, 232, 0.3)',
+            boxShadow: '0 0 20px rgba(196, 81, 232, 0.2), inset 0 0 20px rgba(196, 81, 232, 0.05)',
+            background: 'rgba(255, 255, 255, 0.05)',
+            backdropFilter: 'blur(10px)'
+          }}
+          aria-label="Back to home"
+        >
+          <svg 
+            width="20" 
+            height="20" 
+            viewBox="0 0 20 20" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2"
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          >
+            <path d="M12 5L7 10L12 15" />
+          </svg>
+        </button>
+      )}
+
       {/* Section 1: Hero */}
       <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-[8rem] pb-0">
         {/* Subtle sci-fi grid background */}
@@ -121,7 +153,7 @@ const Index = () => {
 
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '20pt' }}>
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '30pt' }}>
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
               <br />
               <br />

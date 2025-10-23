@@ -32,7 +32,7 @@ export const WaitlistSuccess = ({ position, firstName, referralCode }: WaitlistS
         <p className="text-xl md:text-2xl font-body text-foreground">
           You're in line, {firstName}! 🎉
         </p>
-        <p className="text-base md:text-lg font-body text-muted-foreground">
+        <p className="text-base md:text-lg font-body font-semibold text-bright-green">
           Move up the list by referring friends
         </p>
       </div>
