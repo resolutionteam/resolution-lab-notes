@@ -1,16 +1,8 @@
 import { FloatingBlob } from "@/components/ui/floating-blob";
-import { SMSBubble } from "@/components/ui/sms-bubble";
-import { Button } from "@/components/ui/button";
 import heroBlob from "@/assets/hero-blob-with-halo.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
-  const testimonials = [
-    "I finally stopped texting him. My rash is gone now.",
-    "My mom and I argue less when I slept more.",
-    "I got my period back after I told my situationship to f*ck off.",
-    "Turns out I wasn't mad bec of my roommate, it was just caffeine"
-  ];
 
   return (
     <div className="w-full">
@@ -107,141 +99,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Section 2: Community */}
-      <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-8 pt-[calc(2rem+150pt)] pb-8 -mt-96">
-        {/* Subtle sci-fi grid background */}
-        <div className="absolute inset-0 pointer-events-none opacity-25">
-          <div 
-            className="absolute inset-0"
-            style={{
-              backgroundImage: 'linear-gradient(hsl(290 75% 62% / 0.15) 1px, transparent 1px), linear-gradient(90deg, hsl(290 75% 62% / 0.15) 1px, transparent 1px)',
-              backgroundSize: '50px 50px'
-            }}
-          />
-        </div>
-
-        {/* Subtle scanning lines */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-5">
-          <div 
-            className="absolute h-full w-1"
-            style={{
-              left: '15%',
-              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
-              animation: 'scan 8s ease-in-out infinite',
-              animationDelay: '4s'
-            }}
-          />
-          <div 
-            className="absolute h-full w-1"
-            style={{
-              left: '80%',
-              background: 'linear-gradient(180deg, transparent, hsl(290, 75%, 62%), transparent)',
-              animation: 'scan 8s ease-in-out infinite',
-              animationDelay: '6s'
-            }}
-          />
-        </div>
-
-        {/* Floating color blobs */}
-        <div className="absolute inset-0 pointer-events-none opacity-60">
-          {/* Pastel purple blob - top left */}
-          <div 
-            className="absolute top-1/4 left-16 w-64 h-64 rounded-full blur-3xl"
-            style={{ 
-              background: 'radial-gradient(circle, hsl(290, 75%, 80%) 0%, hsl(290, 75%, 85%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(290, 75%, 80% / 0.3)',
-              animation: 'float 8s ease-in-out infinite',
-              animationDelay: '0s',
-              willChange: 'transform'
-            }}
-          />
-          
-          {/* Pastel yellow blob - bottom right */}
-          <div 
-            className="absolute bottom-1/4 right-20 w-72 h-72 rounded-full blur-3xl"
-            style={{ 
-              background: 'radial-gradient(circle, hsl(50, 100%, 80%) 0%, hsl(50, 100%, 85%) 100%)',
-              boxShadow: '0 0 100px 50px hsl(50, 100%, 80% / 0.4)',
-              animation: 'float 10s ease-in-out infinite',
-              animationDelay: '2s',
-              willChange: 'transform'
-            }}
-          />
-          
-          {/* Baby pink blob - centered behind button */}
-          <div 
-            className="absolute w-56 h-56 rounded-full blur-3xl"
-            style={{ 
-              background: 'radial-gradient(circle, hsl(340, 100%, 82%) 0%, hsl(340, 100%, 88%) 100%)',
-              boxShadow: '0 0 80px 40px hsl(340, 100%, 85% / 0.5)',
-              animation: 'float 9s ease-in-out infinite',
-              animationDelay: '1.5s',
-              willChange: 'transform',
-              left: 'calc(50% - 7rem)',
-              top: '48%'
-            }}
-          />
-        </div>
-
-        {/* Floating SMS bubbles around the sides */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          {/* Left side bubbles */}
-          <SMSBubble 
-            delay={0} 
-            className="absolute top-[calc(18%+120pt)] md:top-[calc(18%+120pt)] max-w-[60%] text-[8px] md:text-[10px]"
-            style={{ left: 'calc(8% + 15pt)' }}
-          >
-            {testimonials[0]}
-          </SMSBubble>
-          
-          {/* Bottom left bubble with glow */}
-          <div className="absolute left-[3%] top-[calc(64%+78pt)] md:left-24 md:top-[calc(70%+78pt)]">
-            <div 
-              className="absolute blur-3xl pointer-events-none"
-              style={{
-                background: 'radial-gradient(circle, rgba(196, 81, 232, 0.6) 0%, transparent 70%)',
-                width: '300px',
-                height: '300px',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                animation: 'pulse 4s ease-in-out infinite',
-                zIndex: -1
-              }}
-            />
-            <SMSBubble delay={2} className="relative z-10 max-w-[60%] text-[8px] md:text-[10px]">
-              {testimonials[2]}
-            </SMSBubble>
-          </div>
-          
-          {/* Right side bubbles */}
-          {/* Top right bubble with glow */}
-            <div className="absolute right-[8%] top-[calc(29%+110pt)] md:right-20 md:top-[calc(24%+110pt)]">
-              <SMSBubble delay={1.5} className="relative z-10 max-w-[60%] text-[8px] md:text-[10px]">
-                {testimonials[1]}
-              </SMSBubble>
-            </div>
-          
-          <SMSBubble 
-            delay={3} 
-            className="absolute right-[8%] bottom-[calc(14%-50pt)] md:right-24 md:bottom-[calc(16%-50pt)] text-[8px] md:text-[10px]"
-          >
-            {testimonials[3]}
-          </SMSBubble>
-        </div>
-
-        {/* Content */}
-        <div className="max-w-3xl mx-auto text-center space-y-8 md:space-y-12 relative z-10 px-4">
-          <p className="text-[14px] md:text-[20px] font-body text-foreground leading-relaxed max-w-xl md:max-w-2xl mx-auto">
-            every week, we share our lab notes — <br className="hidden md:block" />
-            <span className="font-bold">real stories from girls who finally found the men they deserve.</span>
-          </p>
-
-          <Button variant="cta" size="sm" className="font-ui text-xs md:text-sm italic">
-            join our community →
-          </Button>
-        </div>
-      </section>
     </div>
   );
 };
