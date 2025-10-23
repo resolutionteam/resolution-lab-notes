@@ -7,7 +7,7 @@ const Index = () => {
   return (
     <div className="w-full">
       {/* Section 1: Hero */}
-      <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-[calc(8rem-30pt)] pb-0">
+      <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-[8rem] pb-0">
         {/* Subtle sci-fi grid background */}
         <div className="absolute inset-0 pointer-events-none opacity-25">
           <div 
