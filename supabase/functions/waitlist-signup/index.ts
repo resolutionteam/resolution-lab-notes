@@ -26,7 +26,16 @@ const SignupSchema = z.object({
 })
 
 function generateReferralCode(firstName: string, lastName: string): string {
-  const random = Math.random().toString(36).substring(2, 8).toUpperCase();
+  // Use cryptographically secure random generation
+  const buffer = new Uint8Array(6);
+  crypto.getRandomValues(buffer);
+  
+  // Convert to alphanumeric string (base36-like)
+  const random = Array.from(buffer)
+    .map(b => b.toString(36).toUpperCase())
+    .join('')
+    .substring(0, 6);
+  
   return `${firstName.substring(0, 1)}${lastName.substring(0, 1)}_${random}`;
 }
 
