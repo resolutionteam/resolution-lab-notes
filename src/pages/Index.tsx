@@ -170,12 +170,9 @@ const Index = () => {
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
               <br />
               <br />
-              Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your{' '}
-              <span className="inline-block" style={{ minWidth: '140px' }}>
-                <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
-                  {rotatingWords[currentWordIndex]}
-                </span>
-              </span>.
+              Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+                {rotatingWords[currentWordIndex]}.
+              </span>
             </p>
           )}
 
