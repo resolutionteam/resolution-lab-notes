@@ -116,6 +116,13 @@ const Index = () => {
 
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
+          {/* Question - above everything */}
+          {!showForm && !waitlistData && (
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)' }}>
+              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
+            </p>
+          )}
+
           {/* "meet fabio" text above blob */}
           {!showForm && !waitlistData && (
             <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
@@ -164,12 +171,9 @@ const Index = () => {
             </div>
           )}
 
-          {/* Tagline - hidden when form shows */}
+          {/* Tagline below blob - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
-              <br />
-              <br />
               Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your AI psych prof, fix your <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}.
               </span>
