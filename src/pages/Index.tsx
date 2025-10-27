@@ -116,11 +116,11 @@ const Index = () => {
 
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-          {/* "meet fabio" text above blob */}
+          {/* Question text above blob */}
           {!showForm && !waitlistData && (
-            <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
-              meet <span style={{ color: '#C451E8' }}>fabio</span>
-            </h2>
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)' }}>
+              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
+            </p>
           )}
 
           {/* Hero blob with early access prompt - hidden when form shows */}
@@ -164,16 +164,18 @@ const Index = () => {
             </div>
           )}
 
-          {/* Tagline - hidden when form shows */}
+          {/* "meet fabio" text below blob */}
           {!showForm && !waitlistData && (
-            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
-              <br />
-              <br />
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your AI psych prof, fix your <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
-                {rotatingWords[currentWordIndex]}.
-              </span>
-            </p>
+            <div className="mt-3 md:mt-5" style={{ marginTop: '42pt' }}>
+              <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in mb-4">
+                meet <span style={{ color: '#C451E8' }}>fabio</span>
+              </h2>
+              <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)' }}>
+                Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your AI psych prof, fix your <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+                  {rotatingWords[currentWordIndex]}.
+                </span>
+              </p>
+            </div>
           )}
 
           {/* Waitlist Form - shows after blob click */}
