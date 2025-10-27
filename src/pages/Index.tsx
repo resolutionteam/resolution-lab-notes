@@ -125,7 +125,7 @@ const Index = () => {
 
           {/* Hero blob with early access prompt - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in" style={{ marginTop: '-15pt' }}>
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
                 className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
@@ -166,8 +166,8 @@ const Index = () => {
 
           {/* "meet fabio" text below blob */}
           {!showForm && !waitlistData && (
-            <div className="mt-3 md:mt-5" style={{ marginTop: '42pt' }}>
-              <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in mb-4">
+            <div className="mt-3 md:mt-5" style={{ marginTop: '27pt' }}>
+              <h2 className="font-display italic text-foreground animate-fade-in mb-4" style={{ fontSize: 'calc(1.75rem - 2pt)' }}>
                 meet <span style={{ color: '#C451E8' }}>fabio</span>
               </h2>
               <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)' }}>
