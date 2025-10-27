@@ -13,6 +13,10 @@ const Index = () => {
     firstName: string;
   } | null>(null);
   const [referralCode, setReferralCode] = useState<string | undefined>(undefined);
+  
+  // Rotating words state
+  const rotatingWords = ['love life', 'situationship', 'relationship', 'LDR', 'marriage'];
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   // Check for referral code in URL on mount
   useEffect(() => {
@@ -21,6 +25,15 @@ const Index = () => {
     if (ref) {
       setReferralCode(ref);
     }
+  }, []);
+
+  // Rotate words every 2.5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prev) => (prev + 1) % rotatingWords.length);
+    }, 2500);
+    
+    return () => clearInterval(interval);
   }, []);
 
   const handleBlobClick = () => {
@@ -157,7 +170,12 @@ const Index = () => {
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you</span>?
               <br />
               <br />
-              Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your situationship.
+              Let your AI bestie, <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, fix your{' '}
+              <span className="inline-block" style={{ minWidth: '140px' }}>
+                <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+                  {rotatingWords[currentWordIndex]}
+                </span>
+              </span>.
             </p>
           )}
 

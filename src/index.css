@@ -157,3 +157,18 @@ All colors MUST be HSL.
     filter: drop-shadow(0 0 40px rgba(196, 81, 232, 0.8)) drop-shadow(0 0 80px rgba(107, 140, 255, 0.6));
   }
 }
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  20%, 80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}

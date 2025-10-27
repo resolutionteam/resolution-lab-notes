@@ -93,6 +93,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "float": "float 8s ease-in-out infinite",
         "float-bubble": "float-bubble 6s ease-in-out infinite",
+        "fade-slide-up": "fadeSlideUp 2.5s ease-in-out infinite",
       },
     },
   },
