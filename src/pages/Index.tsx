@@ -119,7 +119,7 @@ const Index = () => {
           {/* "meet fabio" text above blob */}
           {!showForm && !waitlistData && (
             <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
-              meet <span style={{ color: '#C451E8' }}>fabio</span>
+              text <span style={{ color: '#C451E8' }}>fabio</span>, 24/7
             </h2>
           )}
 

@@ -24,7 +24,7 @@ const Hero = () => {
       <div className="max-w-4xl mx-auto text-center space-y-12 relative z-10">
         {/* "Meet Fabio" text above blob */}
         <h2 className="text-2xl md:text-3xl font-display italic text-foreground">
-          Meet Fabio
+          text <span style={{ color: '#C451E8' }}>fabio</span>, 24/7
         </h2>
 
         {/* Hero blob */}
