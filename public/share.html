@@ -5,11 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meet Fabio - Your AI Psych Prof</title>
     <meta name="description" content="Stressed about your love life? Talk to Professor Fabio" />
-    <meta name="author" content="Resolution Labs" />
     <link rel="canonical" href="https://meetfabio.com/" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <meta property="og:title" content="Meet Fabio - Your AI Psych Prof" />
     <meta property="og:description" content="Stressed about your love life? Talk to Professor Fabio" />
@@ -23,10 +19,15 @@
     <meta name="twitter:title" content="Meet Fabio - Your AI Psych Prof" />
     <meta name="twitter:description" content="Stressed about your love life? Talk to Professor Fabio" />
     <meta name="twitter:image" content="https://meetfabio.com/og-fabio.png" />
-  </head>
 
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get('ref');
+      const target = ref ? '/?ref=' + encodeURIComponent(ref) : '/';
+      window.location.replace(target);
+    </script>
+  </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <p>Redirecting...</p>
   </body>
 </html>
