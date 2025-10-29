@@ -125,7 +125,7 @@ const Index = () => {
 
           {/* Hero blob with early access prompt - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in" style={{ marginTop: '-5pt' }}>
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
                 className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
@@ -157,17 +157,24 @@ const Index = () => {
               >
                 <FloatingBlob 
                   image={heroBlob} 
-                  opacity={0.389}
+                  opacity={0.469}
                   className="w-full h-auto"
                 />
               </button>
             </div>
           )}
 
+          {/* Heading - hidden when form shows */}
+          {!showForm && !waitlistData && (
+            <h2 className="text-2xl md:text-3xl font-display text-foreground animate-fade-in mb-4">
+              are you tired of men disrespecting you?
+            </h2>
+          )}
+
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ color: '#5FC968', fontStyle: 'italic', fontWeight: 'bold', textShadow: '0 0 20px rgba(95, 201, 104, 0.6), 0 0 40px rgba(95, 201, 104, 0.3)' }}>guardian angel</span>,<br />protect your peace<br />in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ color: '#1e40af', fontStyle: 'italic', fontWeight: 'bold', textShadow: '0 0 20px rgba(30, 64, 175, 0.6), 0 0 40px rgba(30, 64, 175, 0.3)' }}>guardian angel</span>,<br />protect your peace<br />in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}.
               </span>
             </p>
