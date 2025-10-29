@@ -166,8 +166,8 @@ const Index = () => {
 
           {/* Heading - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <h2 className="font-body text-foreground animate-fade-in mb-4" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '15pt' }}>
-              are you tired of <span style={{ color: '#5FC968', fontStyle: 'italic' }}>men disrespecting you?</span>
+            <h2 className="font-body text-foreground animate-fade-in mb-4" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '35pt' }}>
+              are you tired of <span style={{ color: '#5FC968', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
             </h2>
           )}
 
