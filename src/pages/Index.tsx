@@ -167,7 +167,7 @@ const Index = () => {
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold', textShadow: '0 0 20px rgba(196, 81, 232, 0.6), 0 0 40px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,<br />protect your peace<br />in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ color: '#5FC968', fontStyle: 'italic', fontWeight: 'bold', textShadow: '0 0 20px rgba(95, 201, 104, 0.6), 0 0 40px rgba(95, 201, 104, 0.3)' }}>guardian angel</span>,<br />protect your peace<br />in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}.
               </span>
             </p>
