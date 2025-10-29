@@ -15,7 +15,7 @@ const Index = () => {
   const [referralCode, setReferralCode] = useState<string | undefined>(undefined);
   
   // Rotating words state
-  const rotatingWords = ['love', 'situationships', 'marriage', 'LDRs', 'dating'];
+  const rotatingWords = ['love life', 'situationship', 'relationship', 'LDR', 'marriage'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
   // Check for referral code in URL on mount
@@ -167,7 +167,10 @@ const Index = () => {
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your guardian angel, protect your peace in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
+              <br />
+              <br />
+              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your guardian angel, fix your <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}.
               </span>
             </p>
