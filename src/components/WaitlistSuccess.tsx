@@ -9,7 +9,7 @@ interface WaitlistSuccessProps {
 }
 
 export const WaitlistSuccess = ({ position, firstName, referralCode }: WaitlistSuccessProps) => {
-  const referralLink = `${window.location.origin}/share-v3.html?ref=${referralCode}&v=4`;
+  const referralLink = `${window.location.origin}/share-v3.html?ref=${referralCode}&v=5`;
   
   const copyReferralLink = () => {
     navigator.clipboard.writeText(referralLink);
