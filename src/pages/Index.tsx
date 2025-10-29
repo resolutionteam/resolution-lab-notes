@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WaitlistSuccess } from "@/components/WaitlistSuccess";
-import heroBlob from "@/assets/angel-wings.png";
+import heroBlob from "@/assets/hero-blob-with-halo.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
@@ -125,7 +125,7 @@ const Index = () => {
 
           {/* Hero blob with early access prompt - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[13.6rem] mx-auto pb-6 md:pb-12 animate-fade-in" style={{ marginTop: '-5pt' }}>
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
                 className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
@@ -157,24 +157,17 @@ const Index = () => {
               >
                 <FloatingBlob 
                   image={heroBlob} 
-                  opacity={0.469}
+                  opacity={0.556}
                   className="w-full h-auto"
                 />
               </button>
             </div>
           )}
 
-          {/* Heading - hidden when form shows */}
-          {!showForm && !waitlistData && (
-            <h2 className="font-body text-foreground animate-fade-in mb-4" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '35pt' }}>
-              are you tired of <span style={{ color: '#5FC968', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
-            </h2>
-          )}
-
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ color: '#1e40af', fontStyle: 'italic', textShadow: '0 0 20px rgba(30, 64, 175, 0.6), 0 0 40px rgba(30, 64, 175, 0.3)' }}>guardian angel</span>,<br />protect your peace<br />in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your guardian angel, protect your peace in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}.
               </span>
             </p>
