@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meet Fabio - Your Guardian Angel</title>
+    <meta name="description" content="Ready to meet your guardian angel?" />
+    <link rel="canonical" href="https://meetfabio.com/share-v3.html" />
+
+    <meta property="og:title" content="Meet Fabio - Your Guardian Angel" />
+    <meta property="og:description" content="Ready to meet your guardian angel?" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meetfabio.com/share-v3.html" />
+    <meta property="og:image" content="https://meetfabio.com/og-fabio-v3.png" />
+    <meta property="og:image:secure_url" content="https://meetfabio.com/og-fabio-v3.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Meet Fabio" />
+    <meta property="og:image:alt" content="Meet Fabio – your guardian angel" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Meet Fabio - Your Guardian Angel" />
+    <meta name="twitter:description" content="Ready to meet your guardian angel?" />
+    <meta name="twitter:image" content="https://meetfabio.com/og-fabio-v3.png" />
+    <meta name="twitter:image:src" content="https://meetfabio.com/og-fabio-v3.png" />
+
+    <link rel="image_src" href="https://meetfabio.com/og-fabio-v3.png" />
+
+    <meta http-equiv="refresh" content="1.5; url=/?ref={REF_PLACEHOLDER}" />
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const ref = params.get('ref');
+      const target = ref ? '/?ref=' + encodeURIComponent(ref) : '/';
+      
+      // Update meta refresh tag
+      const metaRefresh = document.querySelector('meta[http-equiv="refresh"]');
+      if (metaRefresh) {
+        metaRefresh.setAttribute('content', '1.5; url=' + target);
+      }
+      
+      // Update fallback link
+      window.addEventListener('DOMContentLoaded', () => {
+        const fallbackLink = document.getElementById('fallback-link');
+        if (fallbackLink) {
+          fallbackLink.href = target;
+        }
+      });
+    </script>
+  </head>
+  <body style="font-family: system-ui, -apple-system, sans-serif; padding: 20px; text-align: center;">
+    <p>Redirecting...</p>
+    <p><a id="fallback-link" href="/">Click here if you're not redirected</a></p>
+  </body>
+</html>
