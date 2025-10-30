@@ -128,7 +128,7 @@ const Index = () => {
             <div className="relative w-full max-w-[14rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
-                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-13px] md:bottom-[-11px]"
+                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-2px] md:bottom-[0px]"
                 style={{ 
                   transform: 'rotate(0deg)',
                   transformOrigin: 'top left'
