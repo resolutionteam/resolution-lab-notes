@@ -157,7 +157,7 @@ const Index = () => {
               >
                 <FloatingBlob 
                   image={heroBlob} 
-                  opacity={0.417}
+                  opacity={0.45}
                   className="w-full h-auto"
                 />
               </button>
