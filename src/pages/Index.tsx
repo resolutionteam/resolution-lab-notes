@@ -125,7 +125,7 @@ const Index = () => {
 
           {/* Hero blob with early access prompt - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[15.2rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
                 className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
