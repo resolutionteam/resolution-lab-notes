@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WaitlistSuccess } from "@/components/WaitlistSuccess";
-import heroBlob from "@/assets/wings.png";
+import heroBlob from "@/assets/wings-new.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
@@ -157,7 +157,7 @@ const Index = () => {
               >
                 <FloatingBlob 
                   image={heroBlob} 
-                  opacity={0.53}
+                  opacity={0.37}
                   className="w-full h-auto"
                 />
               </button>
