@@ -166,7 +166,7 @@ const Index = () => {
 
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '42pt' }}>
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '37pt' }}>
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
               <br />
               <br />
