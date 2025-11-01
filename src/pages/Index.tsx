@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { FloatingBlob } from "@/components/ui/floating-blob";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { WaitlistSuccess } from "@/components/WaitlistSuccess";
-import heroBlob from "@/assets/wings-new.png";
+import heroBlob from "@/assets/wings.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
@@ -125,10 +125,10 @@ const Index = () => {
 
           {/* Hero blob with early access prompt - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[14rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
-                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-13px] md:bottom-[-11px]"
+                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
                 style={{ 
                   transform: 'rotate(0deg)',
                   transformOrigin: 'top left'
@@ -157,7 +157,7 @@ const Index = () => {
               >
                 <FloatingBlob 
                   image={heroBlob} 
-                  opacity={0.45}
+                  opacity={0.53}
                   className="w-full h-auto"
                 />
               </button>
@@ -166,7 +166,7 @@ const Index = () => {
 
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
-            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '47pt' }}>
+            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in" style={{ fontSize: 'calc(1.125rem + 1pt)', marginTop: '37pt' }}>
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men disrespecting you?</span>
               <br />
               <br />
