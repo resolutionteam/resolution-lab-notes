@@ -142,7 +142,7 @@ const Index = () => {
                 />
                 
                 <p 
-                  className="text-[15px] md:text-[19px] font-display italic whitespace-nowrap"
+                  className="text-[18px] md:text-[19px] font-display italic whitespace-nowrap"
                   style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
                 >
                   tap the wings for
