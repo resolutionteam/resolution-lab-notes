@@ -167,14 +167,12 @@ const Index = () => {
           {/* Tagline - hidden when form shows */}
           {!showForm && !waitlistData && (
             <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in text-[calc(1.125rem-1pt)] md:text-[calc(1.125rem+1pt)]" style={{ marginTop: '37pt' }}>
-              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men wasting your time?</span>
+              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men <br className="md:hidden" />wasting your time?</span>
               <br />
               <br />
               Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ fontStyle: 'italic', textShadow: '0 0 20px rgba(196, 81, 232, 0.5), 0 0 10px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,
               <br />
-              protect your peace
-              <br />
-              in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              protect your peace<br className="hidden md:block" /> in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}
               </span>
             </p>
