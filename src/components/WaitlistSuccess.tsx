@@ -26,14 +26,11 @@ export const WaitlistSuccess = ({ position, firstName, referralCode }: WaitlistS
     <div className="w-full max-w-md mx-auto space-y-8 animate-fade-in text-center">
       {/* Position Reveal */}
       <div className="space-y-4">
-        <h2 className="text-5xl md:text-6xl font-display font-bold text-bright-green">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-bright-green">
           Invite your friends to move up the list 🚀
         </h2>
         <p className="text-xl md:text-2xl font-body font-semibold text-foreground">
-          You're in line, {firstName}! 🎉
-        </p>
-        <p className="text-lg font-body text-muted-foreground">
-          You're at position <span className="font-bold" style={{ color: '#C451E8' }}>#{position}</span>
+          You're at position <span className="font-bold" style={{ color: '#C451E8' }}>#{position}</span>, {firstName}! 🎉
         </p>
       </div>
 
