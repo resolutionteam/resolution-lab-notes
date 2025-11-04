@@ -170,9 +170,7 @@ const Index = () => {
               are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men <br className="md:hidden" />wasting your time?</span>
               <br />
               <br />
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your <span style={{ fontStyle: 'italic', textShadow: '0 0 20px rgba(196, 81, 232, 0.5), 0 0 10px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,
-              <br />
-              protect your peace<br className="hidden md:block" /> in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your<br className="md:hidden" /> <span style={{ fontStyle: 'italic', textShadow: '0 0 20px rgba(196, 81, 232, 0.5), 0 0 10px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,<br className="hidden md:block" /> protect<br className="md:hidden" /> your peace in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
                 {rotatingWords[currentWordIndex]}
               </span>
             </p>
