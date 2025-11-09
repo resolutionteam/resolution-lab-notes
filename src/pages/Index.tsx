@@ -128,7 +128,7 @@ const Index = () => {
             <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
-                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-3 md:left-[calc(10%+50px)] bottom-[-18px] md:bottom-[-16px]"
+                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-[-12px] md:left-[calc(10%+50px)] bottom-[10px] md:bottom-[12px]"
                 style={{ 
                   transform: 'rotate(0deg)',
                   transformOrigin: 'top left'
@@ -138,12 +138,12 @@ const Index = () => {
                 <img 
                   src={arrowPurple}
                   alt=""
-                  className="animate-pulse w-[52px] md:w-[72px] h-auto"
+                  className="animate-bounce drop-shadow-[0_4px_8px_rgba(196,81,232,0.4)] w-[70px] md:w-[80px] h-auto"
                 />
                 
                 <p 
-                  className="text-[18px] md:text-[19px] font-display italic whitespace-nowrap"
-                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px' }}
+                  className="text-[21px] md:text-[23px] font-display font-semibold italic whitespace-nowrap"
+                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 15px rgba(196, 81, 232, 0.4)' }}
                 >
                   tap the wings for
                   <br />
