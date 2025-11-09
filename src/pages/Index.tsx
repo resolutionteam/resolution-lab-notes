@@ -142,12 +142,12 @@ const Index = () => {
                 />
                 
                 <p 
-                  className="text-[21px] md:text-[23px] font-display italic whitespace-nowrap"
-                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 15px rgba(196, 81, 232, 0.4)' }}
+                  className="text-[19px] md:text-[20px] font-display italic"
+                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 20px rgba(196, 81, 232, 0.7), 0 0 40px rgba(196, 81, 232, 0.4), 0 0 60px rgba(196, 81, 232, 0.2)' }}
                 >
-                  TAP THE WINGS for
+                  TAP THE WINGS
                   <br />
-                  early access
+                  for early access
                 </p>
               </div>
 
