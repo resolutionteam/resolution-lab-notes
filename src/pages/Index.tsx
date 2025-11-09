@@ -142,7 +142,7 @@ const Index = () => {
                 />
                 
                 <p 
-                  className="text-[19px] md:text-[20px] font-display italic"
+                  className="text-[18px] md:text-[19px] font-display italic"
                   style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 20px rgba(196, 81, 232, 0.7), 0 0 40px rgba(196, 81, 232, 0.4), 0 0 60px rgba(196, 81, 232, 0.2)' }}
                 >
                   TAP THE WINGS
