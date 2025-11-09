@@ -128,7 +128,7 @@ const Index = () => {
             <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
               {/* Early access text with arrow - positioned below blob on left */}
               <div 
-                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-[-12px] md:left-[calc(10%+50px)] bottom-[10px] md:bottom-[12px]"
+                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-[-12px] md:left-[calc(10%+50px)] bottom-[-8px] md:bottom-[-4px]"
                 style={{ 
                   transform: 'rotate(0deg)',
                   transformOrigin: 'top left'
@@ -142,10 +142,10 @@ const Index = () => {
                 />
                 
                 <p 
-                  className="text-[21px] md:text-[23px] font-display font-semibold italic whitespace-nowrap"
+                  className="text-[21px] md:text-[23px] font-display italic whitespace-nowrap"
                   style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 15px rgba(196, 81, 232, 0.4)' }}
                 >
-                  tap the wings for
+                  TAP THE WINGS for
                   <br />
                   early access
                 </p>
