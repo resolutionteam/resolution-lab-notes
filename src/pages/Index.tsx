@@ -147,7 +147,7 @@ const Index = () => {
                 >
                   TAP THE WINGS
                   <br />
-                  for early access
+                  to sign up!
                 </p>
               </div>
 
