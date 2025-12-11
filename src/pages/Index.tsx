@@ -1,31 +1,12 @@
 import { useState, useEffect } from "react";
 import { FloatingBlob } from "@/components/ui/floating-blob";
-import { WaitlistForm } from "@/components/WaitlistForm";
-import { WaitlistSuccess } from "@/components/WaitlistSuccess";
 import heroBlob from "@/assets/wings.png";
 import arrowPurple from "@/assets/arrow-purple.png";
 
 const Index = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [waitlistData, setWaitlistData] = useState<{
-    position: number;
-    referralCode: string;
-    firstName: string;
-  } | null>(null);
-  const [referralCode, setReferralCode] = useState<string | undefined>(undefined);
-  
   // Rotating words state
   const rotatingWords = ['love.', 'situationships.', 'marriage.', 'LDRs.', 'dating.'];
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  // Check for referral code in URL on mount
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const ref = params.get('ref');
-    if (ref) {
-      setReferralCode(ref);
-    }
-  }, []);
 
   // Rotate words every 2.5 seconds
   useEffect(() => {
@@ -37,46 +18,13 @@ const Index = () => {
   }, []);
 
   const handleBlobClick = () => {
-    setShowForm(true);
-  };
-
-  const handleWaitlistSuccess = (position: number, referralCode: string, firstName: string) => {
-    setWaitlistData({ position, referralCode, firstName });
+    const phoneNumber = "+16104125994";
+    const message = encodeURIComponent("Fabio! we need to talk about my love life.");
+    window.location.href = `sms:${phoneNumber}?body=${message}`;
   };
 
   return (
     <div className="w-full">
-      {/* Back Arrow - Shows when in waitlist flow */}
-      {(showForm || waitlistData) && (
-        <button
-          onClick={() => {
-            setShowForm(false);
-            setWaitlistData(null);
-          }}
-          className="fixed top-6 left-6 md:top-8 md:left-8 z-50 p-3 transition-all duration-300 hover:scale-105 animate-fade-in"
-          style={{
-            color: '#C451E8',
-            border: '1px solid rgba(196, 81, 232, 0.3)',
-            boxShadow: '0 0 20px rgba(196, 81, 232, 0.2), inset 0 0 20px rgba(196, 81, 232, 0.05)',
-            background: 'rgba(255, 255, 255, 0.05)',
-            backdropFilter: 'blur(10px)'
-          }}
-          aria-label="Back to home"
-        >
-          <svg 
-            width="20" 
-            height="20" 
-            viewBox="0 0 20 20" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2"
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          >
-            <path d="M12 5L7 10L12 15" />
-          </svg>
-        </button>
-      )}
 
       {/* Section 1: Hero */}
       <section className="min-h-screen flex items-start justify-center relative overflow-hidden px-8 pt-[8rem] pb-0">
@@ -117,88 +65,58 @@ const Index = () => {
         {/* Content */}
         <div className="max-w-4xl mx-auto text-center space-y-6 relative z-10">
           {/* "meet fabio" text above blob */}
-          {!showForm && !waitlistData && (
-            <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
-              text <span style={{ color: '#C451E8' }}>fabio</span>, 24/7
-            </h2>
-          )}
+          <h2 className="text-3xl md:text-4xl font-display italic text-foreground animate-fade-in">
+            text <span style={{ color: '#C451E8' }}>fabio</span>, 24/7
+          </h2>
 
-          {/* Hero blob with early access prompt - hidden when form shows */}
-          {!showForm && !waitlistData && (
-            <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
-              {/* Early access text with arrow - positioned below blob on left */}
-              <div 
-                className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-[-12px] md:left-[calc(10%+50px)] bottom-[-8px] md:bottom-[-4px]"
-                style={{ 
-                  transform: 'rotate(0deg)',
-                  transformOrigin: 'top left'
-                }}
-              >
-                {/* Custom purple arrow pointing up */}
-                <img 
-                  src={arrowPurple}
-                  alt=""
-                  className="animate-bounce drop-shadow-[0_4px_8px_rgba(196,81,232,0.4)] w-[70px] md:w-[80px] h-auto"
-                />
-                
-                <p 
-                  className="text-[18px] md:text-[19px] font-display italic"
-                  style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 20px rgba(196, 81, 232, 0.7), 0 0 40px rgba(196, 81, 232, 0.4), 0 0 60px rgba(196, 81, 232, 0.2)' }}
-                >
-                  TAP THE WINGS
-                  <br />
-                  to sign up!
-                </p>
-              </div>
-
-              <button 
-                onClick={handleBlobClick}
-                className="relative block cursor-pointer hover:scale-105 transition-transform duration-300 w-full"
-              >
-                <FloatingBlob 
-                  image={heroBlob} 
-                  opacity={0.53}
-                  className="w-full h-auto scale-[0.85] md:scale-100 -translate-y-[5px]"
-                />
-              </button>
-            </div>
-          )}
-
-          {/* Tagline - hidden when form shows */}
-          {!showForm && !waitlistData && (
-            <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in text-[calc(1.125rem-1pt)] md:text-[calc(1.125rem+1pt)]" style={{ marginTop: '37pt' }}>
-              are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men <br className="md:hidden" />wasting your time?</span>
-              <br />
-              <br />
-              Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your<br className="md:hidden" /> <span style={{ fontStyle: 'italic', textShadow: '0 0 20px rgba(196, 81, 232, 0.5), 0 0 10px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,<br className="hidden md:block" /> protect<br className="md:hidden" /> your peace in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
-                {rotatingWords[currentWordIndex]}
-              </span>
-            </p>
-          )}
-
-          {/* Waitlist Form - shows after blob click */}
-          {showForm && !waitlistData && (
-            <div className="pt-8">
-              <h2 className="text-2xl md:text-3xl font-display italic text-foreground mb-8">
-                Join the <span style={{ color: '#C451E8' }}>waitlist</span>
-              </h2>
-              <WaitlistForm 
-                referralCode={referralCode}
-                onSuccess={handleWaitlistSuccess}
+          {/* Hero blob with CTA prompt */}
+          <div className="relative w-full max-w-[16rem] mx-auto pb-6 md:pb-12 animate-fade-in">
+            {/* CTA text with arrow - positioned below blob on left */}
+            <div 
+              className="absolute z-20 pointer-events-none flex flex-col items-start gap-2 animate-fade-in left-[-12px] md:left-[calc(10%+50px)] bottom-[-8px] md:bottom-[-4px]"
+              style={{ 
+                transform: 'rotate(0deg)',
+                transformOrigin: 'top left'
+              }}
+            >
+              {/* Custom purple arrow pointing up */}
+              <img 
+                src={arrowPurple}
+                alt=""
+                className="animate-bounce drop-shadow-[0_4px_8px_rgba(196,81,232,0.4)] w-[70px] md:w-[80px] h-auto"
               />
+              
+              <p 
+                className="text-[18px] md:text-[19px] font-display italic"
+                style={{ color: '#C451E8', marginTop: '-8px', marginLeft: '-30px', textShadow: '0 0 20px rgba(196, 81, 232, 0.7), 0 0 40px rgba(196, 81, 232, 0.4), 0 0 60px rgba(196, 81, 232, 0.2)' }}
+              >
+                TAP THE WINGS
+                <br />
+                to text Fabio!
+              </p>
             </div>
-          )}
 
-          {/* Success State - shows after successful signup */}
-          {waitlistData && (
-            <div className="pt-8">
-              <WaitlistSuccess 
-                position={waitlistData.position}
-                firstName={waitlistData.firstName}
-                referralCode={waitlistData.referralCode}
+            <button 
+              onClick={handleBlobClick}
+              className="relative block cursor-pointer hover:scale-105 transition-transform duration-300 w-full"
+            >
+              <FloatingBlob 
+                image={heroBlob} 
+                opacity={0.53}
+                className="w-full h-auto scale-[0.85] md:scale-100 -translate-y-[5px]"
               />
-            </div>
-          )}
+            </button>
+          </div>
+
+          {/* Tagline */}
+          <p className="font-body text-foreground max-w-2xl mx-auto leading-relaxed mt-3 md:mt-5 animate-fade-in text-[calc(1.125rem-1pt)] md:text-[calc(1.125rem+1pt)]" style={{ marginTop: '37pt' }}>
+            are you tired of <span style={{ color: '#65C466', fontStyle: 'italic', fontWeight: 'bold' }}>men <br className="md:hidden" />wasting your time?</span>
+            <br />
+            <br />
+            Let <span style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>Fabio</span>, your<br className="md:hidden" /> <span style={{ fontStyle: 'italic', textShadow: '0 0 20px rgba(196, 81, 232, 0.5), 0 0 10px rgba(196, 81, 232, 0.3)' }}>guardian angel</span>,<br className="hidden md:block" /> protect<br className="md:hidden" /> your peace in <span key={currentWordIndex} className="inline-block animate-fade-slide-up" style={{ color: '#C451E8', fontStyle: 'italic', fontWeight: 'bold' }}>
+              {rotatingWords[currentWordIndex]}
+            </span>
+          </p>
         </div>
       </section>
 
