@@ -18,9 +18,9 @@ const Index = () => {
   }, []);
 
   const handleBlobClick = () => {
-    const phoneNumber = "+16104125994";
-    const message = encodeURIComponent("Fabio! we need to talk about my love life.");
-    window.location.href = `sms:${phoneNumber}?body=${message}`;
+    const email = "lecuongqagiv8895@gmail.com";
+    const message = encodeURIComponent("who's fabio?");
+    window.location.href = `sms:${email}?body=${message}`;
   };
 
   return (
